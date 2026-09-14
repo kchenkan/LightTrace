@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-09-11T15:12:10.210951+00:00",
+  "script_sha256": "73a3625e342c460e1e33eb3f2388e496fa037fc0f48d7144ba3b1f5515e82294",
+  "source_sha256": {
+    "results/v1_20_eight_scenes/middlebury_vs_dda/report.json": "072d89d25157e50948c46b3fc13de1aee09a5e896c7d3f86749954a353d44f8a",
+    "results/v1_20_eight_scenes/middlebury_vs_dda/timings.csv": "58f1e2431c8a76198e68e0cb6b948bac1aa6b0437a0d04b8a10b0f35b71aaf6a",
+    "results/v1_20_eight_scenes/middlebury_vs_hiz/report.json": "8ecb3ea9c0f0168718db0ee3a41a2073f3849ca603ada980ccc1998f9438d769",
+    "results/v1_20_eight_scenes/middlebury_vs_hiz/timings.csv": "2ece744605af4f976c177b6d068d2284b27f9519e8254b605853e2a89e526c8c",
+    "results/v1_20_eight_scenes/arkit_vs_dda/report.json": "a9f6e350747c11d6fc6ee1a508e930105280c0b91c04748d7c80b046de67d15c",
+    "results/v1_20_eight_scenes/arkit_vs_dda/timings.csv": "58e26d92bebac4bfeb3b600eff66e7aec270111fe4c22c926599d8755c51b076",
+    "results/v1_20_eight_scenes/arkit_vs_hiz/report.json": "7c4eab1bfec6c22e42505bee09e4b307dde56d4f133246519ef8a3ba8e64a5c7",
+    "results/v1_20_eight_scenes/arkit_vs_hiz/timings.csv": "f75ddac64977e2e11a8ae8145b6aa0a599fd57d0f78975f2ad46ad1ba29a5f06",
+    "results/v1_20_eight_scenes/traversal_ablation/timing_report.json": "3a0441c3d22f671475f54e9ea669289633ccf4abd1e64200ef1e220d09aef074",
+    "results/v1_20_eight_scenes/dataset_regression.json": "f3c85bab35508f08b8083e71d3f7ba8e0256793fc27e9c6bf3545e1a6a753c97"
+  },
+  "figures": [
+    "Pipes-perfect_warm_trajectory_latency.png",
+    "Playtable-perfect_warm_trajectory_latency.png",
+    "Motorcycle-perfect_warm_trajectory_latency.png",
+    "Sticks-perfect_warm_trajectory_latency.png",
+    "Shelves-perfect_warm_trajectory_latency.png",
+    "Adirondack-perfect_warm_trajectory_latency.png",
+    "41069021_warm_trajectory_latency.png",
+    "41069042_warm_trajectory_latency.png"
+  ],
+  "scene_count": 8,
+  "gpu_work_performed": false,
+  "plot_environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "dependencies": {
+      "matplotlib": "3.11.1",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "fonttools": "4.65.0",
+      "kiwisolver": "1.5.1",
+      "pyparsing": "3.3.2",
+      "numpy": "2.3.5",
+      "pillow": "12.3.0",
+      "packaging": "26.3",
+      "python-dateutil": "2.9.0.post0",
+      "six": "1.17.0"
+    },
+    "numpy_module": "[runtime-path-removed]",
+    "matplotlib_module": "third_party/plotting/matplotlib/__init__.py",
+    "backend": "Agg"
+  },
+  "aggregation": "unsmoothed per-measured-frame median and full min-max range across repeat blocks",
+  "interval_interpretation": "descriptive repeat range, not confidence interval",
+  "pair_policy": "DDA/LT and RGBA Hi-Z/LT occupy distinct rows; no independently timed cross-pair ratio",
+  "cold_policy": "frame zero validated but excluded from curves",
+  "motion_scope": "three smooth existing trajectories; no dedicated abrupt-jump sequence in these sources",
+  "sampling": {
+    "middlebury_vs_dda": {
+      "frames": 240,
+      "repeats": 12,
+      "stabilization": 512,
+      "resolution": [
+        192,
+        129
+      ]
+    },
+    "middlebury_vs_hiz": {
+      "frames": 240,
+      "repeats": 12,
+      "stabilization": 512,
+      "resolution": [
+        192,
+        129
+      ]
+    },
+    "arkit_vs_dda": {
+      "frames": 24,
+      "repeats": 6,
+      "stabilization": 8,
+      "resolution": [
+        1920,
+        1440
+      ]
+    },
+    "arkit_vs_hiz": {
+      "frames": 24,
+      "repeats": 6,
+      "stabilization": 8,
+      "resolution": [
+        1920,
+        1440
+      ]
+    }
+  }
+}

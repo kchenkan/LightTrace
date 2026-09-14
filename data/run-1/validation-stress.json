@@ -1,0 +1,1815 @@
+{
+  "protocol": "1.19c-independent-regression",
+  "reference": "FP64 packed-field breakpoint enumeration",
+  "reference_input_precision": "uploaded_fp32",
+  "reference_admission": "positive derivative above config.derivative_threshold; independent FP64 arithmetic",
+  "shader_sha256": {
+    "continue_feedback_split.spv": "3ae21b3c0de67364822d8fd11773a55b9643998be00fbae21ecf9a097dbca0d3",
+    "continue_feedback_split_hiz.spv": "525f79015c7b8edd6ee0dbe8e4e9925e1c3fb615758ad6ad9ff84d987d94649f",
+    "continue_feedback_split_hiz_instrumented.spv": "25d4287e26810bc1ba7a8de69136a9af50aa12ff76680dd15f31d626a935df01",
+    "continue_feedback_split_hiz_min_stackless.spv": "185b742e4e4bce779a77eff5a93a2a29c59dc5cf1465a0e5d0d2c22b2a801f88",
+    "continue_feedback_split_hiz_min_stackless_instrumented.spv": "83546270272f0b409e8de58f7355a33407588c144e3f47558c0e1582510f4def",
+    "continue_feedback_split_instrumented.spv": "238637be8e7d9ef1258a2493c9b7575edbf7da847ca28ada24615578d379257b",
+    "dda.spv": "9e480b177da87d32c8b82328cce54c6a7a2710f00a929174e20f2d3c4401785d",
+    "dda_instrumented.spv": "285bc70bc203a58f7b93c9f9f2a83effb1c9c503e27c17d2e03e404245081dcd",
+    "fallback.spv": "33fbaea5506e647bc54a74fb0509f27e1cf7b8e5cf50e47e2757e14f49350379",
+    "fallback_adaptive.spv": "7ec2ba8620c8decddee54058ba09ec2e010157ebabdf6352ba3fa46983050419",
+    "fallback_adaptive_instrumented.spv": "60fb6f21e77931639d334102812963371c0fe65c63504de9384b1b206710c190",
+    "fallback_cheap.spv": "6c35fb3bf925f768e8e64bf7e70aa217eebc1ed2ac8059540496a894ee998727",
+    "fallback_cheap_instrumented.spv": "1df259e797cdc6d7334c77650ee98738461741f89ec59ffbae3ed52d2d342c1f",
+    "fallback_feedback.spv": "338d8964f916b47795d9df1dcaab27dcff99b8bb693f9ac5e2575d23ba424a73",
+    "fallback_feedback_compact.spv": "519e47f71f9fc2f0cbc212eaff3a214dfe2d511f21202ce6e419e3dd77272dac",
+    "fallback_feedback_compact_instrumented.spv": "8c3aba8594a1ae5be927de601fcee9a4d4991a8097c84067f1f6bd0c779ad38d",
+    "fallback_feedback_instrumented.spv": "1d266636c1309f04b1fa6e0571d6a47cfebc2a6c826eb4938766f4fb39fe1805",
+    "fallback_instrumented.spv": "09804b7eb980d88fbd436c2aa8cf416fc0e42aa5bf6af8c264d8d5d0d5ba2b51",
+    "hiz_minmax.spv": "a8090ee09dd09d6d27d811a707688e78dc10daa58efd75f80141f8485daa2cfd",
+    "hiz_minmax_instrumented.spv": "918382c5f56a7bc2c253b60d06bab38f8ab0b67a76e7505a1da502e3f441169c",
+    "hiz_min_stackless.spv": "68eaaecd74bf5069ff5ab11dce5ec1e051a865ca60fcf1d1c147d8dee1dec213",
+    "hiz_min_stackless_instrumented.spv": "76e18dc65999f611305c4beb80e63502a710669efba19dd41c862d69f4c927f7",
+    "inline.spv": "ce02b7764704ac528cf5a245d9841988e267adc12deb891b84a669f3927d9528",
+    "inline_feedback.spv": "c8ff316fca941da83b10833e3161395271473316b342e9e91b94f16018ec737f",
+    "inline_feedback_instrumented.spv": "e824f4ca5a964f9462db311451809482a113855c42b210b51a5e4bd7e27f2440",
+    "inline_instrumented.spv": "b57c413368983c4e1c962c33cca0d4b461ad606ba50046a6c270c0809fd09c93",
+    "rebuild_feedback_split.spv": "66efd87e2a3a0b327249f2ecfa1da687c587b0a2c7b1aaa2eb6909a1699e3838",
+    "rebuild_feedback_split_instrumented.spv": "46a8ea79cae76c32048253adb62eee5167c665e39582883dabc9c6b92317e134",
+    "validate.spv": "d8610c0ab25e45b4e16eca127e088a05cc7f5ada9f2c5ebe792b86e70250b121",
+    "validate_adaptive.spv": "758e3aa2b2b1af9f78dafb3493a9d3001c75e898e64dc749399b59485b21732e",
+    "validate_adaptive_instrumented.spv": "543c3f05d1638bc84d99b32880397414f51610c2d148997a44bd04628aa9d324",
+    "validate_cheap.spv": "e4883b38e0b13e1651c3c22de84032780ba1885266e6e30d2be4e0c87ab4dadb",
+    "validate_cheap_instrumented.spv": "bf9f018afd6d503f54a052051cf1b97698a13b1dadf56dc771304abbe6d27d38",
+    "validate_feedback.spv": "e46b5280008d52aec70159b2ffe6da14f194b8590df31474a492b4ee831d6131",
+    "validate_feedback_compact.spv": "7a4a724675f7f6328b7491155bd830ee1053f65cf85b63988fd99b5a37103231",
+    "validate_feedback_compact_instrumented.spv": "3ea763203aa347769cf7fdb58c54b31fcc7363b2d9c591496c406784e4a3e5c9",
+    "validate_feedback_instrumented.spv": "fae08659c96c216f1ab97e2f1bdbd16336c2a72b9efcb6bbc2859a3d4ea4aeb3",
+    "validate_feedback_split.spv": "bf92f115563bfba0ed09da73cb5753bf77483c6b25272c888cf761098ccf7603",
+    "validate_feedback_split_instrumented.spv": "bf92f115563bfba0ed09da73cb5753bf77483c6b25272c888cf761098ccf7603",
+    "validate_instrumented.spv": "58f13fdba239096a42aa75aab0860c57f6f16f1c7c9697bc040088ef94a45d5c"
+  },
+  "seed": 20260910,
+  "cases": [
+    {
+      "name": "quadratic_cancellation",
+      "shape": [
+        4,
+        6
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 8.691390385173747e-09,
+        "hiz_minmax": 8.691390385173747e-09,
+        "hiz_min_stackless": 8.691390385173747e-09
+      },
+      "passed": true
+    },
+    {
+      "name": "near_coincident_cell_exits",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 5.659554493386842e-07,
+        "hiz_minmax": 5.659554493386842e-07,
+        "hiz_min_stackless": 5.659554493386842e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "short_boundary_interval",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.1440424718678344e-09,
+        "hiz_minmax": 1.1440424718678344e-09,
+        "hiz_min_stackless": 1.1440424718678344e-09
+      },
+      "passed": true
+    },
+    {
+      "name": "late_occluder_1024",
+      "shape": [
+        3,
+        1024
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 2.038329283138296e-09,
+        "hiz_minmax": 2.038329283138296e-09,
+        "hiz_min_stackless": 2.038329283138296e-09
+      },
+      "passed": true
+    },
+    {
+      "name": "stationary_and_equal_depth",
+      "shape": [
+        5,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 9,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.503961304452628e-10,
+        "hiz_minmax": 1.503961304452628e-10,
+        "hiz_min_stackless": 1.503961304452628e-10
+      },
+      "passed": true
+    },
+    {
+      "name": "large_endpoint_depth_ratio",
+      "shape": [
+        4,
+        6
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 9.000000078529524e-09,
+        "hiz_minmax": 9.000000078529524e-09,
+        "hiz_min_stackless": 9.000000078529524e-09
+      },
+      "passed": true
+    },
+    {
+      "name": "grazing_below_threshold",
+      "shape": [
+        4,
+        6
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 0.0,
+        "hiz_minmax": 0.0,
+        "hiz_min_stackless": 0.0
+      },
+      "passed": true
+    },
+    {
+      "name": "grazing_above_threshold",
+      "shape": [
+        4,
+        6
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 1,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.5894571991914574e-08,
+        "hiz_minmax": 1.5894571991914574e-08,
+        "hiz_min_stackless": 1.5894571991914574e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_-2ulp_identity",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 7.141944634581066e-07,
+        "hiz_minmax": 7.141944634581066e-07,
+        "hiz_min_stackless": 7.141944634581066e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_-2ulp_reflect_u",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.1035870661757485e-08,
+        "hiz_minmax": 1.1035870661757485e-08,
+        "hiz_min_stackless": 1.1035870661757485e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_-2ulp_reflect_v",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.1035870661757485e-08,
+        "hiz_minmax": 1.1035870661757485e-08,
+        "hiz_min_stackless": 1.1035870661757485e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_-2ulp_transpose",
+      "shape": [
+        7,
+        10
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 7.141944634581066e-07,
+        "hiz_minmax": 7.141944634581066e-07,
+        "hiz_min_stackless": 7.141944634581066e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+0ulp_identity",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.131344208260554e-06,
+        "hiz_minmax": 1.131344208260554e-06,
+        "hiz_min_stackless": 1.131344208260554e-06
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+0ulp_reflect_u",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.0176534882020434e-08,
+        "hiz_minmax": 3.0176534882020434e-08,
+        "hiz_min_stackless": 3.0176534882020434e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+0ulp_reflect_v",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.0176534882020434e-08,
+        "hiz_minmax": 3.0176534882020434e-08,
+        "hiz_min_stackless": 3.0176534882020434e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+0ulp_transpose",
+      "shape": [
+        7,
+        10
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.131344208260554e-06,
+        "hiz_minmax": 1.131344208260554e-06,
+        "hiz_min_stackless": 1.131344208260554e-06
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+2ulp_identity",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.102851825476094e-08,
+        "hiz_minmax": 3.102851825476094e-08,
+        "hiz_min_stackless": 3.102851825476094e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+2ulp_reflect_u",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 2.7517039924429554e-08,
+        "hiz_minmax": 2.7517039924429554e-08,
+        "hiz_min_stackless": 2.7517039924429554e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+2ulp_reflect_v",
+      "shape": [
+        10,
+        7
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 2.7517039924429554e-08,
+        "hiz_minmax": 2.7517039924429554e-08,
+        "hiz_min_stackless": 2.7517039924429554e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_near_corner_depth_+2ulp_transpose",
+      "shape": [
+        7,
+        10
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.102851825476094e-08,
+        "hiz_minmax": 3.102851825476094e-08,
+        "hiz_min_stackless": 3.102851825476094e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "boundary_grid_corner_and_diagonal_endpoint_ties",
+      "shape": [
+        9,
+        9
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 12,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 6.23269945099203e-08,
+        "hiz_minmax": 6.23269945099203e-08,
+        "hiz_min_stackless": 6.23269945099203e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "flat",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.503961304452628e-10,
+        "hiz_minmax": 1.503961304452628e-10,
+        "hiz_min_stackless": 1.503961304452628e-10
+      },
+      "passed": true
+    },
+    {
+      "name": "smooth",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.2376279086290243e-07,
+        "hiz_minmax": 1.2376279086290243e-07,
+        "hiz_min_stackless": 1.2376279086290243e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "thin_occluder",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 9.768788411523843e-08,
+        "hiz_minmax": 9.768788411523843e-08,
+        "hiz_min_stackless": 9.768788411523843e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "multiple_occluders",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 4.9628272491553105e-08,
+        "hiz_minmax": 4.9628272491553105e-08,
+        "hiz_min_stackless": 4.9628272491553105e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "checkerboard",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.673355134514722e-07,
+        "hiz_minmax": 3.673355134514722e-07,
+        "hiz_min_stackless": 3.673355134514722e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "random_depth",
+      "shape": [
+        13,
+        19
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 1.452840204807515e-07,
+        "hiz_minmax": 1.452840204807515e-07,
+        "hiz_min_stackless": 1.452840204807515e-07
+      },
+      "passed": true
+    },
+    {
+      "name": "public_sample_Pipes-perfect",
+      "shape": [
+        129,
+        192
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "corridor",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": true
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 3.764983783072218e-08,
+        "hiz_minmax": 3.764983783072218e-08,
+        "hiz_min_stackless": 3.764983783072218e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "public_sample_Playtable-perfect",
+      "shape": [
+        129,
+        192
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "corridor",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": true
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 7.303041629769247e-08,
+        "hiz_minmax": 7.303041629769247e-08,
+        "hiz_min_stackless": 7.303041629769247e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "public_sample_Motorcycle-perfect",
+      "shape": [
+        129,
+        192
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "corridor",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": true
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 480,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 4.6509861850729806e-08,
+        "hiz_minmax": 4.6509861850729806e-08,
+        "hiz_min_stackless": 4.6509861850729806e-08
+      },
+      "passed": true
+    },
+    {
+      "name": "highres_spatial_sparse_1920x1440",
+      "shape": [
+        1440,
+        1920
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "reference_config_fp32": {
+        "s_min": 9.999999747378752e-05,
+        "thickness": 0.0010000000474974513,
+        "residual_tolerance": 9.99999993922529e-09,
+        "derivative_threshold": 9.999999974752427e-07
+      },
+      "queries_per_method_per_build": 3,
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "failures": [],
+      "timing_instrumented_mismatches": {
+        "dda": 0,
+        "hiz_minmax": 0,
+        "hiz_min_stackless": 0
+      },
+      "maximum_root_error": {
+        "dda": 6.936571572691008e-08,
+        "hiz_minmax": 6.936571572691008e-08,
+        "hiz_min_stackless": 6.936571572691008e-08
+      },
+      "passed": true
+    }
+  ],
+  "status_cases": [
+    {
+      "name": "nonfinite_coefficients_fail_closed",
+      "device": {
+        "name": "Intel(R) Graphics",
+        "vendor_id": 32902,
+        "device_id": 32069,
+        "api_version": 4211036,
+        "driver_version": 1663615,
+        "queue_family": 0,
+        "timestamp_period_ns": 52.08333206176758,
+        "timestamp_valid_bits": 36,
+        "max_storage_buffer_range": 1073741820,
+        "max_dispatch_groups_x": 65536
+      },
+      "shape": [
+        4,
+        6
+      ],
+      "config": {
+        "s_min": 0.0001,
+        "thickness": 0.001,
+        "residual_tolerance": 1e-08,
+        "derivative_threshold": 1e-06,
+        "root_tolerance": 1e-07,
+        "newton_iterations": 8,
+        "tracking_radius": 0.12,
+        "prefix_guard": 0.05,
+        "discontinuity_threshold": 0.15,
+        "certificate_safety": 1e-08,
+        "prefix_probes": 16,
+        "certificate_gradient_mode": "global",
+        "certificate_corridor_radius": 4.0,
+        "resume_valid_prefix": false
+      },
+      "checks": [
+        {
+          "method": "dda",
+          "instrumented": false,
+          "passed": true,
+          "host_error": "dda frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        },
+        {
+          "method": "hiz_minmax",
+          "instrumented": false,
+          "passed": true,
+          "host_error": "hiz_minmax frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        },
+        {
+          "method": "hiz_min_stackless",
+          "instrumented": false,
+          "passed": true,
+          "host_error": "hiz_min_stackless frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        },
+        {
+          "method": "dda",
+          "instrumented": true,
+          "passed": true,
+          "host_error": "dda frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        },
+        {
+          "method": "hiz_minmax",
+          "instrumented": true,
+          "passed": true,
+          "host_error": "hiz_minmax frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        },
+        {
+          "method": "hiz_min_stackless",
+          "instrumented": true,
+          "passed": true,
+          "host_error": "hiz_min_stackless frame 0: invalid/incomplete hit status [2]",
+          "gpu_hit_code": 2,
+          "gpu_root": null
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "complete": true,
+  "passed": true
+}

@@ -1,0 +1,5185 @@
+{
+  "created_utc": "2026-09-11T23:29:16.904070+00:00",
+  "protocol": "1.20-two-campaign-equal-weight-mean",
+  "complete": true,
+  "passed": true,
+  "campaign_count": 2,
+  "policy": [
+    "Include both complete campaigns with equal weight; retain all measured repeats.",
+    "Each p50/p95/p99 is the arithmetic mean of the two campaign percentiles, not a percentile of pooled frames.",
+    "Each paired ratio is the arithmetic mean of the two campaign geometric means of per-repeat candidate/baseline p95 ratios. Savings equal 100*(1-mean ratio).",
+    "DDA and headline LightTrace milliseconds remain from their DDA pair; Hi-Z milliseconds remain from its separate pair. Ratios never divide unrelated headline times.",
+    "Confidence intervals remain per campaign. No averaged or pooled confidence interval is claimed.",
+    "Ablation averages the two campaign equal-scene geometric-mean ratios with equal campaign weight.",
+    "Initialization averages corresponding counting-pass CPU-build and mapped-upload observations, excluding depth preparation and device/pipeline creation.",
+    "Identical input queries are replayed, not counted as additional unique queries. Deterministic counts and outputs remain unchanged."
+  ],
+  "fixed_scene_order": [
+    "Pipes-perfect",
+    "Playtable-perfect",
+    "Motorcycle-perfect",
+    "Sticks-perfect",
+    "Shelves-perfect",
+    "Adirondack-perfect",
+    "41069021",
+    "41069042"
+  ],
+  "unique_pixel_frame_queries_per_method": 446867928,
+  "scenes": [
+    {
+      "scene": "Pipes-perfect",
+      "label": "Pipes",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 14779,
+      "pixel_frame_queries_per_method": 10640880,
+      "logical_bytes_reduction_vs_dda_percent": 74.88568483337312,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 3192864,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 3192864,
+            "reference_negatives": 7448016,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 3192864,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 10640880,
+          "hit_root_fallback_trace_sha256": "2d364b38a099502c55a33c6e663141a01279c1befd51c1057c7d99dfeee0168d",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 10640880,
+            "mean": 100.04240166226853,
+            "p50": 83.0,
+            "p95": 251.0,
+            "p99": 310.0,
+            "max": 507
+          },
+          "hierarchy_node_loads": {
+            "count": 10640880,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 10640880,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 10640880,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 10640880,
+            "mean": 1600.6784265962965,
+            "p50": 1328.0,
+            "p95": 4016.0,
+            "p99": 4960.0,
+            "max": 8112
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 10640880,
+            "mean": 1600.6784265962965,
+            "p50": 1328.0,
+            "p95": 4016.0,
+            "p99": 4960.0,
+            "max": 8112
+          },
+          "nominal_trace_bytes": {
+            "count": 10640880,
+            "mean": 1600.6784265962965,
+            "p50": 1328.0,
+            "p95": 4016.0,
+            "p99": 4960.0,
+            "max": 8112
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 3192864,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 3192864,
+            "reference_negatives": 7448016,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 3192864,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 10640880,
+          "hit_root_fallback_trace_sha256": "2d364b38a099502c55a33c6e663141a01279c1befd51c1057c7d99dfeee0168d",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.1262,
+            "mapped_upload_ms": 0.0205,
+            "cpu_build_plus_mapped_upload_ms": 3.1467,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 10640880,
+            "mean": 2.280305012367398,
+            "p50": 2.0,
+            "p95": 5.0,
+            "p99": 9.0,
+            "max": 60
+          },
+          "hierarchy_node_loads": {
+            "count": 10640880,
+            "mean": 36.610697423521366,
+            "p50": 28.0,
+            "p95": 88.0,
+            "p99": 143.0,
+            "max": 551
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 10640880,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 10640880,
+            "mean": 622.2560389742201,
+            "p50": 480.0,
+            "p95": 1472.0,
+            "p99": 2400.0,
+            "max": 9776
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 10640880,
+            "mean": 622.2560389742201,
+            "p50": 480.0,
+            "p95": 1472.0,
+            "p99": 2400.0,
+            "max": 9776
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 10640880,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 3192864,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 3192864,
+            "reference_negatives": 7448016,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 3192864,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 10640880,
+          "hit_root_fallback_trace_sha256": "2d364b38a099502c55a33c6e663141a01279c1befd51c1057c7d99dfeee0168d",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.1374999999999997,
+            "rgba_build_ms": 3.1262,
+            "r32_projection_and_global_extract_ms": 0.0113,
+            "mapped_upload_ms": 0.008,
+            "cpu_build_plus_mapped_upload_ms": 3.1454999999999997,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 10640880,
+            "mean": 2.5549226191818724,
+            "p50": 2.0,
+            "p95": 6.0,
+            "p99": 10.0,
+            "max": 61
+          },
+          "hierarchy_node_loads": {
+            "count": 10640880,
+            "mean": 17.256033147634405,
+            "p50": 15.0,
+            "p95": 29.0,
+            "p99": 40.0,
+            "max": 94
+          },
+          "hierarchy_level_record_loads": {
+            "count": 10640880,
+            "mean": 17.256033147634405,
+            "p50": 15.0,
+            "p95": 29.0,
+            "p99": 40.0,
+            "max": 94
+          },
+          "hierarchy_global_record_loads": {
+            "count": 10640880,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 10640880,
+            "mean": 109.90289449744758,
+            "p50": 100.0,
+            "p95": 196.0,
+            "p99": 296.0,
+            "max": 1272
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 10640880,
+            "mean": 401.9994248595981,
+            "p50": 364.0,
+            "p95": 664.0,
+            "p99": 932.0,
+            "max": 2728
+          },
+          "nominal_trace_bytes": {
+            "count": 10640880,
+            "mean": 109.90289449744758,
+            "p50": 100.0,
+            "p95": 196.0,
+            "p99": 296.0,
+            "max": 1272
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.377799445528984,
+            "p95": 1.6429608973886491,
+            "p99": 1.7930937062232966
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.3109895757408142,
+            "p95": 0.34538671031770707,
+            "p99": 0.3836150948010634
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.3786978830070495,
+            "p95": 1.4472395480003355,
+            "p99": 1.5653645451164246
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.329752596116066,
+            "p95": 0.3589908766522407,
+            "p99": 0.37534243875303264
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.209644793104613
+        },
+        "paired_p95_reduction_percent": 79.0355206895387,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.20773977592347337,
+            "ci_level": 0.95,
+            "ci_low": 0.1978429007412705,
+            "ci_high": 0.2161793262883025,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 79.22602240765266,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.21154981028575265,
+            "ci_level": 0.95,
+            "ci_low": 0.20906495533287656,
+            "ci_high": 0.21532188842604372,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 78.84501897142474,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.21076069405643694,
+            0.2094278033794163,
+            0.1677405476280718,
+            0.24101360206639438,
+            0.2079542929693699,
+            0.20376687495665005,
+            0.21129307359862518,
+            0.2082408997087135,
+            0.2127712870841977,
+            0.2094482754213187,
+            0.2092820968801948,
+            0.2081889541050845
+          ],
+          [
+            0.21072271870395748,
+            0.20682638113212393,
+            0.21060935485732976,
+            0.20986108093601036,
+            0.21074422737633772,
+            0.21013185020583533,
+            0.2071493397757922,
+            0.21076505738890097,
+            0.2093534333191965,
+            0.20853062373627493,
+            0.21402008181480103,
+            0.2308822963067562
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.8720833120422363,
+            "p95": 1.066654921875286,
+            "p99": 1.1364307014217758
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.3095312424430847,
+            "p95": 0.34997004353914263,
+            "p99": 0.38097707403213477
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.8497525834207534,
+            "p95": 0.8705077912473678,
+            "p99": 0.8866848741857529
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.3270572836818695,
+            "p95": 0.3476757727618217,
+            "p99": 0.36882420974550245
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.3214656425117465
+        },
+        "paired_p95_reduction_percent": 67.85343574882535,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.32346271692870476,
+            "ci_level": 0.95,
+            "ci_low": 0.3168139681873641,
+            "ci_high": 0.33539701788732695,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 67.65372830712953,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.31946856809478813,
+            "ci_level": 0.95,
+            "ci_low": 0.3164687908666175,
+            "ci_high": 0.3217148595519737,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 68.05314319052118,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.3172319895814835,
+            0.31820193773668426,
+            0.32080630303980556,
+            0.3179653192758712,
+            0.3156804937930763,
+            0.31897990847850416,
+            0.39004736056318534,
+            0.31708129937854107,
+            0.31691029088242484,
+            0.3143413088754387,
+            0.32583389628063175,
+            0.31517750260023164
+          ],
+          [
+            0.3249287889205382,
+            0.32173913043478264,
+            0.32013836637775195,
+            0.32022671266633823,
+            0.3166228951027345,
+            0.32325128769708644,
+            0.3222351776913355,
+            0.3219567244001767,
+            0.3201288593777708,
+            0.30611068045603224,
+            0.3188798201456429,
+            0.3178095107147769
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.6429608973886491,
+        "hiz_minmax": 1.066654921875286,
+        "hiz_min_stackless": 0.34538671031770707
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 4.0423,
+            "rgba_build_ms": 4.02485,
+            "r32_projection_and_global_extract_ms": 0.01745,
+            "mapped_upload_ms": 0.0104,
+            "cpu_build_plus_mapped_upload_ms": 4.0527,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 4.02485,
+            "mapped_upload_ms": 0.0279,
+            "cpu_build_plus_mapped_upload_ms": 4.05275,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "Playtable-perfect",
+      "label": "Playtable",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 17802,
+      "pixel_frame_queries_per_method": 12817440,
+      "logical_bytes_reduction_vs_dda_percent": 83.13316900970571,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 2017225,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 2017225,
+            "reference_negatives": 10800215,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 2017225,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 12817440,
+          "hit_root_fallback_trace_sha256": "b8c22c1afa331ae3140266d000b983fda47368aaf5a25dd8f7253a7b3d4d48e0",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 12817440,
+            "mean": 146.16167947733712,
+            "p50": 141.0,
+            "p95": 329.0,
+            "p99": 416.0,
+            "max": 519
+          },
+          "hierarchy_node_loads": {
+            "count": 12817440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 12817440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 12817440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 12817440,
+            "mean": 2338.586871637394,
+            "p50": 2256.0,
+            "p95": 5264.0,
+            "p99": 6656.0,
+            "max": 8304
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 12817440,
+            "mean": 2338.586871637394,
+            "p50": 2256.0,
+            "p95": 5264.0,
+            "p99": 6656.0,
+            "max": 8304
+          },
+          "nominal_trace_bytes": {
+            "count": 12817440,
+            "mean": 2338.586871637394,
+            "p50": 2256.0,
+            "p95": 5264.0,
+            "p99": 6656.0,
+            "max": 8304
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 2017225,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 2017225,
+            "reference_negatives": 10800215,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 2017225,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 12817440,
+          "hit_root_fallback_trace_sha256": "b8c22c1afa331ae3140266d000b983fda47368aaf5a25dd8f7253a7b3d4d48e0",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 5.0639,
+            "mapped_upload_ms": 0.0325,
+            "cpu_build_plus_mapped_upload_ms": 5.0964,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 12817440,
+            "mean": 1.7984759827235393,
+            "p50": 1.0,
+            "p95": 5.0,
+            "p99": 8.0,
+            "max": 48
+          },
+          "hierarchy_node_loads": {
+            "count": 12817440,
+            "mean": 36.41469575827934,
+            "p50": 29.0,
+            "p95": 87.0,
+            "p99": 138.0,
+            "max": 477
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 12817440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 12817440,
+            "mean": 611.4107478560461,
+            "p50": 480.0,
+            "p95": 1440.0,
+            "p99": 2304.0,
+            "max": 8352
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 12817440,
+            "mean": 611.4107478560461,
+            "p50": 480.0,
+            "p95": 1440.0,
+            "p99": 2304.0,
+            "max": 8352
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 12817440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 2017225,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 2017225,
+            "reference_negatives": 10800215,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 2017225,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 12817440,
+          "hit_root_fallback_trace_sha256": "b8c22c1afa331ae3140266d000b983fda47368aaf5a25dd8f7253a7b3d4d48e0",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 5.088100000000001,
+            "rgba_build_ms": 5.0639,
+            "r32_projection_and_global_extract_ms": 0.0242,
+            "mapped_upload_ms": 0.0129,
+            "cpu_build_plus_mapped_upload_ms": 5.101000000000001,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 12817440,
+            "mean": 1.9372162459898388,
+            "p50": 1.0,
+            "p95": 5.0,
+            "p99": 9.0,
+            "max": 49
+          },
+          "hierarchy_node_loads": {
+            "count": 12817440,
+            "mean": 17.37250176322261,
+            "p50": 16.0,
+            "p95": 29.0,
+            "p99": 40.0,
+            "max": 89
+          },
+          "hierarchy_level_record_loads": {
+            "count": 12817440,
+            "mean": 17.37250176322261,
+            "p50": 16.0,
+            "p95": 29.0,
+            "p99": 40.0,
+            "max": 89
+          },
+          "hierarchy_global_record_loads": {
+            "count": 12817440,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 12817440,
+            "mean": 100.48546698872786,
+            "p50": 88.0,
+            "p95": 180.0,
+            "p99": 276.0,
+            "max": 1052
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 12817440,
+            "mean": 394.4454952002896,
+            "p50": 352.0,
+            "p95": 660.0,
+            "p99": 916.0,
+            "max": 2196
+          },
+          "nominal_trace_bytes": {
+            "count": 12817440,
+            "mean": 100.48546698872786,
+            "p50": 88.0,
+            "p95": 180.0,
+            "p99": 276.0,
+            "max": 1052
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.4493619437818528,
+            "p95": 1.9168710469513894,
+            "p99": 1.997388232485637
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.27539061827659606,
+            "p95": 0.3201744713499069,
+            "p99": 0.339786970871086
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.4519270478858948,
+            "p95": 1.66784501136446,
+            "p99": 1.7108450103146553
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.2845052013874054,
+            "p95": 0.33458332516479494,
+            "p99": 0.3437825436902046
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.16626121139549588
+        },
+        "paired_p95_reduction_percent": 83.37387886045042,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.1638236633795602,
+            "ci_level": 0.95,
+            "ci_low": 0.16061119829775944,
+            "ci_high": 0.16680404440656046,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 83.61763366204397,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.16869875941143153,
+            "ci_level": 0.95,
+            "ci_low": 0.16676669947427195,
+            "ci_high": 0.17151926788756347,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 83.13012405885685,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.168359918200409,
+            0.16380931554778044,
+            0.1701128949410389,
+            0.1625100212149803,
+            0.1532354841687436,
+            0.16353871384662172,
+            0.169878681515743,
+            0.17056554214889602,
+            0.16310412723692752,
+            0.15471357925618673,
+            0.16683016153292787,
+            0.1603418378647018
+          ],
+          [
+            0.16834052784000875,
+            0.1681219741467841,
+            0.1696892392056821,
+            0.16667212864040548,
+            0.18270585483405954,
+            0.17076819669998483,
+            0.16624074224790425,
+            0.16538298127308185,
+            0.16915477138152518,
+            0.1659654935641028,
+            0.16573758307100384,
+            0.16630351087009945
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.7796614392986297,
+            "p95": 1.0115885169696808,
+            "p99": 1.0900924213030811
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2765885349140167,
+            "p95": 0.3240286379224777,
+            "p99": 0.34749608526620857
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.7659635229663849,
+            "p95": 1.0145767981467246,
+            "p99": 1.0619088282411573
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.2845052013874054,
+            "p95": 0.32855467947864536,
+            "p99": 0.3474270748512268
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.31901943608930694
+        },
+        "paired_p95_reduction_percent": 68.0980563910693,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.3206378900765826,
+            "ci_level": 0.95,
+            "ci_low": 0.3146288252465205,
+            "ci_high": 0.32831680242773337,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 67.93621099234174,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.3174009821020312,
+            "ci_level": 0.95,
+            "ci_low": 0.311015994860973,
+            "ci_high": 0.3216732497041523,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 68.25990178979688,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.31721251438736026,
+            0.3100117761295787,
+            0.3129627318858664,
+            0.31212595141278277,
+            0.3221448569436205,
+            0.3376499523164182,
+            0.31541039050512004,
+            0.3118679481821981,
+            0.35467397012036284,
+            0.31612051399342955,
+            0.3139689853605116,
+            0.32635759054590724
+          ],
+          [
+            0.2876016260162602,
+            0.32370184693802634,
+            0.32543321808705095,
+            0.31650582570815183,
+            0.32033928146069157,
+            0.3183968187526162,
+            0.3234667223905548,
+            0.31908113962012663,
+            0.3149533487105958,
+            0.3219138735991144,
+            0.32238119934510917,
+            0.3168500651890483
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.9168710469513894,
+        "hiz_minmax": 1.0115885169696808,
+        "hiz_min_stackless": 0.3201744713499069
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 5.2063500000000005,
+            "rgba_build_ms": 5.1808499999999995,
+            "r32_projection_and_global_extract_ms": 0.025500000000000002,
+            "mapped_upload_ms": 0.01955,
+            "cpu_build_plus_mapped_upload_ms": 5.2259,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 5.1808499999999995,
+            "mapped_upload_ms": 0.0711,
+            "cpu_build_plus_mapped_upload_ms": 5.25195,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "Motorcycle-perfect",
+      "label": "Motorcycle",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 15563,
+      "pixel_frame_queries_per_method": 11205360,
+      "logical_bytes_reduction_vs_dda_percent": 83.35233192991296,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1773522,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1773522,
+            "reference_negatives": 9431838,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1773522,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11205360,
+          "hit_root_fallback_trace_sha256": "88294c3e1f65139a93f6f4a2f862a9a137ab6b40465ff083327dcadac23a0ea1",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11205360,
+            "mean": 146.8570028093698,
+            "p50": 143.0,
+            "p95": 333.0,
+            "p99": 421.0,
+            "max": 519
+          },
+          "hierarchy_node_loads": {
+            "count": 11205360,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11205360,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11205360,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11205360,
+            "mean": 2349.7120449499166,
+            "p50": 2288.0,
+            "p95": 5328.0,
+            "p99": 6736.0,
+            "max": 8304
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11205360,
+            "mean": 2349.7120449499166,
+            "p50": 2288.0,
+            "p95": 5328.0,
+            "p99": 6736.0,
+            "max": 8304
+          },
+          "nominal_trace_bytes": {
+            "count": 11205360,
+            "mean": 2349.7120449499166,
+            "p50": 2288.0,
+            "p95": 5328.0,
+            "p99": 6736.0,
+            "max": 8304
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1773522,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1773522,
+            "reference_negatives": 9431838,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1773522,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11205360,
+          "hit_root_fallback_trace_sha256": "88294c3e1f65139a93f6f4a2f862a9a137ab6b40465ff083327dcadac23a0ea1",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.1374,
+            "mapped_upload_ms": 0.0359,
+            "cpu_build_plus_mapped_upload_ms": 3.1733,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 11205360,
+            "mean": 1.8328905987848672,
+            "p50": 1.0,
+            "p95": 5.0,
+            "p99": 8.0,
+            "max": 34
+          },
+          "hierarchy_node_loads": {
+            "count": 11205360,
+            "mean": 33.235742805228924,
+            "p50": 25.0,
+            "p95": 85.0,
+            "p99": 134.0,
+            "max": 403
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11205360,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11205360,
+            "mean": 561.0981344642207,
+            "p50": 416.0,
+            "p95": 1424.0,
+            "p99": 2240.0,
+            "max": 6992
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 11205360,
+            "mean": 561.0981344642207,
+            "p50": 416.0,
+            "p95": 1424.0,
+            "p99": 2240.0,
+            "max": 6992
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 11205360,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1773522,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1773522,
+            "reference_negatives": 9431838,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1773522,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11205360,
+          "hit_root_fallback_trace_sha256": "88294c3e1f65139a93f6f4a2f862a9a137ab6b40465ff083327dcadac23a0ea1",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.148,
+            "rgba_build_ms": 3.1374,
+            "r32_projection_and_global_extract_ms": 0.0106,
+            "mapped_upload_ms": 0.0132,
+            "cpu_build_plus_mapped_upload_ms": 3.1612,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11205360,
+            "mean": 2.008463895849843,
+            "p50": 1.0,
+            "p95": 5.0,
+            "p99": 9.0,
+            "max": 37
+          },
+          "hierarchy_node_loads": {
+            "count": 11205360,
+            "mean": 17.15184197562595,
+            "p50": 16.0,
+            "p95": 29.0,
+            "p99": 39.0,
+            "max": 86
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11205360,
+            "mean": 17.15184197562595,
+            "p50": 16.0,
+            "p95": 29.0,
+            "p99": 39.0,
+            "max": 86
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11205360,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 11205360,
+            "mean": 100.7427902361013,
+            "p50": 88.0,
+            "p95": 184.0,
+            "p99": 268.0,
+            "max": 892
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11205360,
+            "mean": 391.1722618461165,
+            "p50": 352.0,
+            "p95": 660.0,
+            "p99": 896.0,
+            "max": 2280
+          },
+          "nominal_trace_bytes": {
+            "count": 11205360,
+            "mean": 100.7427902361013,
+            "p50": 88.0,
+            "p95": 184.0,
+            "p99": 268.0,
+            "max": 892
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.459713506029129,
+            "p95": 1.8788749541290282,
+            "p99": 2.0617731267470725
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.28609374301528934,
+            "p95": 0.3289283773861885,
+            "p99": 0.3459335853043556
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.416315069588661,
+            "p95": 1.6043879816637039,
+            "p99": 1.7940546436998366
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.29132811788749696,
+            "p95": 0.31435546107530593,
+            "p99": 0.31567837770967483
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.17309380837772625
+        },
+        "paired_p95_reduction_percent": 82.69061916222738,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.1718719868525548,
+            "ci_level": 0.95,
+            "ci_low": 0.1671907037223048,
+            "ci_high": 0.17511580902899543,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 82.81280131474452,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.1743156299028977,
+            "ci_level": 0.95,
+            "ci_low": 0.16833573623556544,
+            "ci_high": 0.17999188160108268,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 82.56843700971022,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.17457339609288106,
+            0.17323160105456004,
+            0.1729155447854963,
+            0.17229303824064995,
+            0.17650796864280013,
+            0.1722633786333832,
+            0.1509371404052815,
+            0.1697193767330442,
+            0.1808170955986055,
+            0.17172587412587415,
+            0.1746737857659101,
+            0.17456872565386755
+          ],
+          [
+            0.17688355208042444,
+            0.17465447063559514,
+            0.17402700912652527,
+            0.15648946184950513,
+            0.15488593819480637,
+            0.19563317798888694,
+            0.17809212708657787,
+            0.1733042746381133,
+            0.18074261811575512,
+            0.1770874177972463,
+            0.17371516750905755,
+            0.17991713789821395
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.8057551886615753,
+            "p95": 0.9683945076075553,
+            "p99": 1.0129223711037822
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.28761718047809604,
+            "p95": 0.3342929605885505,
+            "p99": 0.3590317620679091
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.8212239382839203,
+            "p95": 0.9044465925021172,
+            "p99": 0.9811822677120207
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.29567707611465455,
+            "p95": 0.3231835858597755,
+            "p99": 0.3350677001529694
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.3434409254796679
+        },
+        "paired_p95_reduction_percent": 65.6559074520332,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.347729589534916,
+            "ci_level": 0.95,
+            "ci_low": 0.33870589963129577,
+            "ci_high": 0.35785843954458185,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 65.2270410465084,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.33915226142441984,
+            "ci_level": 0.95,
+            "ci_low": 0.3365524585227573,
+            "ci_high": 0.3418349661243145,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.08477385755802,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.33869173555521626,
+            0.3372041235321595,
+            0.37365343484488744,
+            0.3765376799877641,
+            0.34006617128600103,
+            0.34070051588379047,
+            0.3819410134685197,
+            0.3371855363005805,
+            0.3376224689745264,
+            0.3375680973887427,
+            0.33542428616389747,
+            0.34098571024642754
+          ],
+          [
+            0.3359546688499159,
+            0.3394329422216443,
+            0.34361880315851295,
+            0.34152700992112867,
+            0.33902123531313993,
+            0.3404648332663284,
+            0.3322659675062323,
+            0.3424979008332077,
+            0.34841492017855796,
+            0.34095427435387665,
+            0.33190210390725633,
+            0.3341597476447192
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.8788749541290282,
+        "hiz_minmax": 0.9683945076075553,
+        "hiz_min_stackless": 0.3289283773861885
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 3.5966000000000005,
+            "rgba_build_ms": 3.57995,
+            "r32_projection_and_global_extract_ms": 0.01665,
+            "mapped_upload_ms": 0.02155,
+            "cpu_build_plus_mapped_upload_ms": 3.61815,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 3.57995,
+            "mapped_upload_ms": 0.08380000000000001,
+            "cpu_build_plus_mapped_upload_ms": 3.6637500000000003,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "Sticks-perfect",
+      "label": "Sticks",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 16259,
+      "pixel_frame_queries_per_method": 11706480,
+      "logical_bytes_reduction_vs_dda_percent": 83.07044729446153,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1680181,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1680181,
+            "reference_negatives": 10026299,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1680181,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11706480,
+          "hit_root_fallback_trace_sha256": "244a81cdf4eb1e505b8761e0a4f2bf1d3fd298c8223822e9fafab433e952ae8c",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11706480,
+            "mean": 146.46700929741476,
+            "p50": 139.0,
+            "p95": 325.0,
+            "p99": 411.0,
+            "max": 519
+          },
+          "hierarchy_node_loads": {
+            "count": 11706480,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11706480,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11706480,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11706480,
+            "mean": 2343.472148758636,
+            "p50": 2224.0,
+            "p95": 5200.0,
+            "p99": 6576.0,
+            "max": 8304
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11706480,
+            "mean": 2343.472148758636,
+            "p50": 2224.0,
+            "p95": 5200.0,
+            "p99": 6576.0,
+            "max": 8304
+          },
+          "nominal_trace_bytes": {
+            "count": 11706480,
+            "mean": 2343.472148758636,
+            "p50": 2224.0,
+            "p95": 5200.0,
+            "p99": 6576.0,
+            "max": 8304
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1680181,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1680181,
+            "reference_negatives": 10026299,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1680181,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11706480,
+          "hit_root_fallback_trace_sha256": "244a81cdf4eb1e505b8761e0a4f2bf1d3fd298c8223822e9fafab433e952ae8c",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.6782,
+            "mapped_upload_ms": 0.0199,
+            "cpu_build_plus_mapped_upload_ms": 3.6980999999999997,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 11706480,
+            "mean": 2.202914710485133,
+            "p50": 2.0,
+            "p95": 5.0,
+            "p99": 7.0,
+            "max": 22
+          },
+          "hierarchy_node_loads": {
+            "count": 11706480,
+            "mean": 32.84217783654864,
+            "p50": 27.0,
+            "p95": 75.0,
+            "p99": 112.0,
+            "max": 346
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11706480,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11706480,
+            "mean": 560.7214807525405,
+            "p50": 464.0,
+            "p95": 1280.0,
+            "p99": 1888.0,
+            "max": 5808
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 11706480,
+            "mean": 560.7214807525405,
+            "p50": 464.0,
+            "p95": 1280.0,
+            "p99": 1888.0,
+            "max": 5808
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 11706480,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1680181,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1680181,
+            "reference_negatives": 10026299,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1680181,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11706480,
+          "hit_root_fallback_trace_sha256": "244a81cdf4eb1e505b8761e0a4f2bf1d3fd298c8223822e9fafab433e952ae8c",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.6893,
+            "rgba_build_ms": 3.6782,
+            "r32_projection_and_global_extract_ms": 0.0111,
+            "mapped_upload_ms": 0.008,
+            "cpu_build_plus_mapped_upload_ms": 3.6973,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11706480,
+            "mean": 2.6165667220206243,
+            "p50": 2.0,
+            "p95": 6.0,
+            "p99": 8.0,
+            "max": 23
+          },
+          "hierarchy_node_loads": {
+            "count": 11706480,
+            "mean": 16.943714250568917,
+            "p50": 16.0,
+            "p95": 27.0,
+            "p99": 36.0,
+            "max": 84
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11706480,
+            "mean": 16.943714250568917,
+            "p50": 16.0,
+            "p95": 27.0,
+            "p99": 36.0,
+            "max": 84
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11706480,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 11706480,
+            "mean": 109.63992455460566,
+            "p50": 108.0,
+            "p95": 188.0,
+            "p99": 248.0,
+            "max": 648
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11706480,
+            "mean": 396.7393525637083,
+            "p50": 364.0,
+            "p95": 628.0,
+            "p99": 824.0,
+            "max": 1984
+          },
+          "nominal_trace_bytes": {
+            "count": 11706480,
+            "mean": 109.63992455460566,
+            "p50": 108.0,
+            "p95": 188.0,
+            "p99": 248.0,
+            "max": 648
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.4741536098432542,
+            "p95": 1.918031203173065,
+            "p99": 2.0894418760715645
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2591145770072937,
+            "p95": 0.32976171069917676,
+            "p99": 0.341534887495079
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.479895797203064,
+            "p95": 1.5536392849860192,
+            "p99": 1.6505520430366514
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.2846093680515289,
+            "p95": 0.3475325435986519,
+            "p99": 0.3501536372846603
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.17027371427002358
+        },
+        "paired_p95_reduction_percent": 82.97262857299764,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.1716073656876466,
+            "ci_level": 0.95,
+            "ci_low": 0.17050964464272778,
+            "ci_high": 0.17282306428110703,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 82.83926343123534,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.16894006285240057,
+            "ci_level": 0.95,
+            "ci_low": 0.1617207468448462,
+            "ci_high": 0.17335129506794944,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 83.10599371475995,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.16981111522624778,
+            0.17186155672449657,
+            0.17426939542198144,
+            0.17134623434330426,
+            0.1697715673698862,
+            0.17279704346498925,
+            0.16943724596961182,
+            0.17223859140864622,
+            0.16975922068698693,
+            0.1694101097558981,
+            0.17252853528868586,
+            0.17620421947373877
+          ],
+          [
+            0.17289729812209131,
+            0.17576994879744967,
+            0.17170670520546452,
+            0.17140640451955175,
+            0.17313175699619998,
+            0.16814374165351462,
+            0.13504843807549657,
+            0.17216754155730532,
+            0.17624181852747073,
+            0.16978139476375648,
+            0.1734595705601959,
+            0.17200816688470572
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.691210920624733,
+            "p95": 0.9784661219449995,
+            "p99": 1.0477471098369024
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2602083269805908,
+            "p95": 0.3315325439892769,
+            "p99": 0.3557528558979606
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.7614973772420883,
+            "p95": 1.0210676834049224,
+            "p99": 1.0669517968680382
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.28899738877773284,
+            "p95": 0.34947915813446045,
+            "p99": 0.3625846265645027
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.34783924200793137
+        },
+        "paired_p95_reduction_percent": 65.21607579920686,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.35677320122071315,
+            "ci_level": 0.95,
+            "ci_low": 0.3551215737810018,
+            "ci_high": 0.35875551533786443,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 64.32267987792868,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.33890528279514964,
+            "ci_level": 0.95,
+            "ci_low": 0.3242120318230787,
+            "ci_high": 0.3517131277888709,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.10947172048503,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.35605323689962576,
+            0.355552273398623,
+            0.3548866337538855,
+            0.35755893328479105,
+            0.36199902828152714,
+            0.35629700752120336,
+            0.3553707727133123,
+            0.35407608077036906,
+            0.352393270027115,
+            0.3647622305850153,
+            0.3554054208013854,
+            0.35710146903439105
+          ],
+          [
+            0.35851782748185396,
+            0.35824929590260746,
+            0.36621032626631617,
+            0.2817161351295928,
+            0.33764904083323244,
+            0.3443047996041563,
+            0.3112601641984523,
+            0.3666277608188184,
+            0.34034642733263964,
+            0.329802395512205,
+            0.35339599418149265,
+            0.32923617208077266
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.918031203173065,
+        "hiz_minmax": 0.9784661219449995,
+        "hiz_min_stackless": 0.32976171069917676
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 4.90145,
+            "rgba_build_ms": 4.87375,
+            "r32_projection_and_global_extract_ms": 0.0277,
+            "mapped_upload_ms": 0.0157,
+            "cpu_build_plus_mapped_upload_ms": 4.9171499999999995,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 4.87375,
+            "mapped_upload_ms": 0.0428,
+            "cpu_build_plus_mapped_upload_ms": 4.91655,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "Shelves-perfect",
+      "label": "Shelves",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 16295,
+      "pixel_frame_queries_per_method": 11732400,
+      "logical_bytes_reduction_vs_dda_percent": 83.75152667580014,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1277037,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1277037,
+            "reference_negatives": 10455363,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1277037,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11732400,
+          "hit_root_fallback_trace_sha256": "21f714aa5fccdd374264714fc5230deaaba3699ed96856c817dd548ce577d69a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11732400,
+            "mean": 145.34026507790392,
+            "p50": 139.0,
+            "p95": 301.0,
+            "p99": 371.0,
+            "max": 519
+          },
+          "hierarchy_node_loads": {
+            "count": 11732400,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11732400,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11732400,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11732400,
+            "mean": 2325.4442412464628,
+            "p50": 2224.0,
+            "p95": 4816.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11732400,
+            "mean": 2325.4442412464628,
+            "p50": 2224.0,
+            "p95": 4816.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "nominal_trace_bytes": {
+            "count": 11732400,
+            "mean": 2325.4442412464628,
+            "p50": 2224.0,
+            "p95": 4816.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1277037,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1277037,
+            "reference_negatives": 10455363,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1277037,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11732400,
+          "hit_root_fallback_trace_sha256": "21f714aa5fccdd374264714fc5230deaaba3699ed96856c817dd548ce577d69a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 4.1145,
+            "mapped_upload_ms": 0.0273,
+            "cpu_build_plus_mapped_upload_ms": 4.1418,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 11732400,
+            "mean": 1.7652672939892946,
+            "p50": 1.0,
+            "p95": 4.0,
+            "p99": 7.0,
+            "max": 38
+          },
+          "hierarchy_node_loads": {
+            "count": 11732400,
+            "mean": 29.80095751934813,
+            "p50": 22.0,
+            "p95": 76.0,
+            "p99": 118.0,
+            "max": 382
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11732400,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 11732400,
+            "mean": 505.0595970133988,
+            "p50": 384.0,
+            "p95": 1264.0,
+            "p99": 1984.0,
+            "max": 6720
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 11732400,
+            "mean": 505.0595970133988,
+            "p50": 384.0,
+            "p95": 1264.0,
+            "p99": 1984.0,
+            "max": 6720
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 11732400,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1277037,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1277037,
+            "reference_negatives": 10455363,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1277037,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 11732400,
+          "hit_root_fallback_trace_sha256": "21f714aa5fccdd374264714fc5230deaaba3699ed96856c817dd548ce577d69a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 4.1282,
+            "rgba_build_ms": 4.1145,
+            "r32_projection_and_global_extract_ms": 0.0137,
+            "mapped_upload_ms": 0.0094,
+            "cpu_build_plus_mapped_upload_ms": 4.1376,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 11732400,
+            "mean": 2.075492567590604,
+            "p50": 1.0,
+            "p95": 5.0,
+            "p99": 8.0,
+            "max": 41
+          },
+          "hierarchy_node_loads": {
+            "count": 11732400,
+            "mean": 16.432065306331186,
+            "p50": 15.0,
+            "p95": 27.0,
+            "p99": 36.0,
+            "max": 70
+          },
+          "hierarchy_level_record_loads": {
+            "count": 11732400,
+            "mean": 16.432065306331186,
+            "p50": 15.0,
+            "p95": 27.0,
+            "p99": 36.0,
+            "max": 70
+          },
+          "hierarchy_global_record_loads": {
+            "count": 11732400,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 11732400,
+            "mean": 98.9361423067744,
+            "p50": 88.0,
+            "p95": 180.0,
+            "p99": 252.0,
+            "max": 884
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 11732400,
+            "mean": 377.8491872080734,
+            "p50": 352.0,
+            "p95": 616.0,
+            "p99": 836.0,
+            "max": 1872
+          },
+          "nominal_trace_bytes": {
+            "count": 11732400,
+            "mean": 98.9361423067744,
+            "p50": 88.0,
+            "p95": 180.0,
+            "p99": 252.0,
+            "max": 884
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.4137890279836656,
+            "p95": 1.7978567269403456,
+            "p99": 1.8525986526872062
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2622656185970306,
+            "p95": 0.300494784330368,
+            "p99": 0.31223645071037287
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.4417577773008345,
+            "p95": 1.4894726198859214,
+            "p99": 1.5033658487133978
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.26177082694244386,
+            "p95": 0.3047981696419716,
+            "p99": 0.3061770758583069
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.16666410661080416
+        },
+        "paired_p95_reduction_percent": 83.3335893389196,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.1658324646646303,
+            "ci_level": 0.95,
+            "ci_low": 0.1643104890629515,
+            "ci_high": 0.16714006566094566,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 83.41675353353696,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.16749574855697805,
+            "ci_level": 0.95,
+            "ci_low": 0.16639543057641024,
+            "ci_high": 0.16856847290781823,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 83.2504251443022,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.168248991086723,
+            0.1633268104033958,
+            0.16505006530256855,
+            0.16017028837112712,
+            0.16705380889885135,
+            0.16566820143386157,
+            0.1626405795278472,
+            0.16704565129566568,
+            0.16757984765468398,
+            0.1689113192263088,
+            0.1669185597101884,
+            0.1676031810529982
+          ],
+          [
+            0.17016443975757015,
+            0.16614412782461277,
+            0.16829169323517476,
+            0.16963586474147385,
+            0.16536395006832028,
+            0.16454846401370463,
+            0.16528680220778316,
+            0.16553629595160538,
+            0.16744743626301364,
+            0.16936380696429812,
+            0.16954449521070578,
+            0.16875723882325688
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.7090624826889038,
+            "p95": 0.89302341569767,
+            "p99": 0.9390301854077909
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2593749936676025,
+            "p95": 0.2981992114697456,
+            "p99": 0.310364575756073
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.6985807121114731,
+            "p95": 0.8167122196440697,
+            "p99": 0.8659817496912001
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.2610546811265946,
+            "p95": 0.29705728441429136,
+            "p99": 0.3029869717695236
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.33261746477748255
+        },
+        "paired_p95_reduction_percent": 66.73825352225174,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.3305496753501921,
+            "ci_level": 0.95,
+            "ci_low": 0.32284159403428636,
+            "ci_high": 0.3359662162369815,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.9450324649808,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.334685254204773,
+            "ci_level": 0.95,
+            "ci_low": 0.3320370427469672,
+            "ci_high": 0.3370219933232409,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.5314745795227,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.3283956432146012,
+            0.331831341053418,
+            0.3330789192489696,
+            0.3370773357070074,
+            0.3369968967462856,
+            0.3394320139710967,
+            0.33379082534660837,
+            0.322042695310737,
+            0.2965814114246214,
+            0.3416745171926519,
+            0.3323193737030749,
+            0.3358695269294445
+          ],
+          [
+            0.3410316171104361,
+            0.32405817945624943,
+            0.3357144532807845,
+            0.3337317070312958,
+            0.3403903868971454,
+            0.332307041459058,
+            0.3345615584898642,
+            0.33058820769104424,
+            0.33391812176943636,
+            0.3353186771712979,
+            0.33676695325532835,
+            0.338178793983976
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.7978567269403456,
+        "hiz_minmax": 0.89302341569767,
+        "hiz_min_stackless": 0.300494784330368
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 3.8206499999999997,
+            "rgba_build_ms": 3.80835,
+            "r32_projection_and_global_extract_ms": 0.0123,
+            "mapped_upload_ms": 0.01055,
+            "cpu_build_plus_mapped_upload_ms": 3.8312,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 3.80835,
+            "mapped_upload_ms": 0.030350000000000002,
+            "cpu_build_plus_mapped_upload_ms": 3.8387000000000002,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "Adirondack-perfect",
+      "label": "Adirondack",
+      "dataset": "Middlebury",
+      "resolution": [
+        192,
+        129
+      ],
+      "valid_pixels": 19977,
+      "pixel_frame_queries_per_method": 14383440,
+      "logical_bytes_reduction_vs_dda_percent": 82.2588819976976,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1866094,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1866094,
+            "reference_negatives": 12517346,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1866094,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 14383440,
+          "hit_root_fallback_trace_sha256": "2cbfd9d35b2dbd6129d86d73897abc6c32e0dcfb62b0b3d085424370a65a047a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 14383440,
+            "mean": 138.27100610146113,
+            "p50": 134.0,
+            "p95": 295.0,
+            "p99": 371.0,
+            "max": 519
+          },
+          "hierarchy_node_loads": {
+            "count": 14383440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 14383440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 14383440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 14383440,
+            "mean": 2212.336097623378,
+            "p50": 2144.0,
+            "p95": 4720.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 14383440,
+            "mean": 2212.336097623378,
+            "p50": 2144.0,
+            "p95": 4720.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "nominal_trace_bytes": {
+            "count": 14383440,
+            "mean": 2212.336097623378,
+            "p50": 2144.0,
+            "p95": 4720.0,
+            "p99": 5936.0,
+            "max": 8304
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1866094,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1866094,
+            "reference_negatives": 12517346,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1866094,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 14383440,
+          "hit_root_fallback_trace_sha256": "2cbfd9d35b2dbd6129d86d73897abc6c32e0dcfb62b0b3d085424370a65a047a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.1292,
+            "mapped_upload_ms": 0.0196,
+            "cpu_build_plus_mapped_upload_ms": 3.1488,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 14383440,
+            "mean": 1.9438820615930543,
+            "p50": 2.0,
+            "p95": 4.0,
+            "p99": 8.0,
+            "max": 49
+          },
+          "hierarchy_node_loads": {
+            "count": 14383440,
+            "mean": 33.79331967874166,
+            "p50": 26.0,
+            "p95": 79.0,
+            "p99": 134.0,
+            "max": 565
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 14383440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 14383440,
+            "mean": 571.7952278453555,
+            "p50": 448.0,
+            "p95": 1328.0,
+            "p99": 2256.0,
+            "max": 9776
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 14383440,
+            "mean": 571.7952278453555,
+            "p50": 448.0,
+            "p95": 1328.0,
+            "p99": 2256.0,
+            "max": 9776
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 14383440,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 1866094,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 1866094,
+            "reference_negatives": 12517346,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 1866094,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 14383440,
+          "hit_root_fallback_trace_sha256": "2cbfd9d35b2dbd6129d86d73897abc6c32e0dcfb62b0b3d085424370a65a047a",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 3.1399,
+            "rgba_build_ms": 3.1292,
+            "r32_projection_and_global_extract_ms": 0.0107,
+            "mapped_upload_ms": 0.0079,
+            "cpu_build_plus_mapped_upload_ms": 3.1477999999999997,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 14383440,
+            "mean": 2.2822571651844066,
+            "p50": 2.0,
+            "p95": 5.0,
+            "p99": 9.0,
+            "max": 51
+          },
+          "hierarchy_node_loads": {
+            "count": 14383440,
+            "mean": 16.998852152197248,
+            "p50": 16.0,
+            "p95": 27.0,
+            "p99": 38.0,
+            "max": 96
+          },
+          "hierarchy_level_record_loads": {
+            "count": 14383440,
+            "mean": 16.998852152197248,
+            "p50": 16.0,
+            "p95": 27.0,
+            "p99": 38.0,
+            "max": 96
+          },
+          "hierarchy_global_record_loads": {
+            "count": 14383440,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 14383440,
+            "mean": 104.5115232517395,
+            "p50": 96.0,
+            "p95": 176.0,
+            "p99": 276.0,
+            "max": 1200
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 14383440,
+            "mean": 392.4931576868955,
+            "p50": 364.0,
+            "p95": 624.0,
+            "p99": 880.0,
+            "max": 2752
+          },
+          "nominal_trace_bytes": {
+            "count": 14383440,
+            "mean": 104.5115232517395,
+            "p50": 96.0,
+            "p95": 176.0,
+            "p99": 276.0,
+            "max": 1200
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 8604,
+            "p50": 1.5152213171739577,
+            "p95": 1.958850212593174,
+            "p99": 2.01442312790308
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2983203052167892,
+            "p95": 0.38775650094995495,
+            "p99": 0.41268071909145354
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 36,
+            "p50": 1.5400520457344054,
+            "p95": 1.5859960550293923,
+            "p99": 1.6103879815172195
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.3130338465242386,
+            "p95": 0.3307421794252396,
+            "p99": 0.33192967939624785
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.19772607075756254
+        },
+        "paired_p95_reduction_percent": 80.22739292424374,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.19913353211743107,
+            "ci_level": 0.95,
+            "ci_low": 0.19750858836750151,
+            "ci_high": 0.20103778228662333,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 80.0866467882569,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.19631860939769405,
+            "ci_level": 0.95,
+            "ci_low": 0.19431191024653321,
+            "ci_high": 0.1981677946526415,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 80.36813906023059,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.19654588626127326,
+            0.19479231837799435,
+            0.20188427449583426,
+            0.19832102438765206,
+            0.1985263236240105,
+            0.20421778406733132,
+            0.199527896308085,
+            0.19699180603883715,
+            0.20577866462667646,
+            0.19714011822974917,
+            0.19751694203006476,
+            0.19864725853991336
+          ],
+          [
+            0.19544493787095948,
+            0.19411335441498417,
+            0.19653366649831203,
+            0.19706504537243758,
+            0.1882794109314556,
+            0.19349138800157062,
+            0.19780014316698177,
+            0.19595852166976868,
+            0.195853296767791,
+            0.2019796910999232,
+            0.20063831484879918,
+            0.19902312717001117
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 8604,
+            "p50": 0.8155728967552185,
+            "p95": 1.2796822604244231,
+            "p99": 1.3818726225128746
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 8604,
+            "p50": 0.2973177010746002,
+            "p95": 0.3884296780168533,
+            "p99": 0.41129972954183575
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 36,
+            "p50": 0.9182161234159469,
+            "p95": 1.066126276054859,
+            "p99": 1.0917721087620735
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 36,
+            "p50": 0.3122135340442658,
+            "p95": 0.32776691908121114,
+            "p99": 0.33021743985471724
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.30315304840032187
+        },
+        "paired_p95_reduction_percent": 69.68469515996782,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.3049106004683732,
+            "ci_level": 0.95,
+            "ci_low": 0.30279878681347805,
+            "ci_high": 0.30732927158051704,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 69.50893995316267,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.30139549633227053,
+            "ci_level": 0.95,
+            "ci_low": 0.30003135442032525,
+            "ci_high": 0.3028642679195812,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 69.86045036677295,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.3006510852782838,
+            0.30382406385878385,
+            0.30058677388774474,
+            0.30604201735077047,
+            0.31177935010482183,
+            0.30469278754026174,
+            0.30270420100928574,
+            0.3116977259399231,
+            0.30977800924418986,
+            0.2999330852591722,
+            0.3045171721130763,
+            0.30303030303030304
+          ],
+          [
+            0.2989176570458404,
+            0.30446997685843036,
+            0.3015780389578368,
+            0.299118928461526,
+            0.3023128607466793,
+            0.30228478172174617,
+            0.29893960125097746,
+            0.2975923031842157,
+            0.3011921971185863,
+            0.3014302595656249,
+            0.3020442489325915,
+            0.3069886095900427
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1.958850212593174,
+        "hiz_minmax": 1.2796822604244231,
+        "hiz_min_stackless": 0.38775650094995495
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 3.26825,
+            "rgba_build_ms": 3.2575000000000003,
+            "r32_projection_and_global_extract_ms": 0.01075,
+            "mapped_upload_ms": 0.007600000000000001,
+            "cpu_build_plus_mapped_upload_ms": 3.27585,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 130564,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 130724,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 3.2575000000000003,
+            "mapped_upload_ms": 0.01865,
+            "cpu_build_plus_mapped_upload_ms": 3.2761500000000003,
+            "level_count": 9,
+            "node_count": 32641,
+            "level_metadata_bytes": 144,
+            "node_bytes": 522256,
+            "hierarchy_total_bytes": 522400,
+            "instrumentation_stats_buffer_bytes": 396288,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "41069021",
+      "label": "ARKit-41069021",
+      "dataset": "ARKitScenes",
+      "resolution": [
+        1920,
+        1440
+      ],
+      "valid_pixels": 2675166,
+      "pixel_frame_queries_per_method": 192611952,
+      "logical_bytes_reduction_vs_dda_percent": 97.91163787352883,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 6245725,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 6245725,
+            "reference_negatives": 186366227,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 6245725,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 192611952,
+          "hit_root_fallback_trace_sha256": "a4e9171fdd7d1405c605960a4242546525c4eaf7fb21a61e7621c9a9d55a002e",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 192611952,
+            "mean": 1672.1690478065452,
+            "p50": 1612.0,
+            "p95": 3361.0,
+            "p99": 4227.0,
+            "max": 5493
+          },
+          "hierarchy_node_loads": {
+            "count": 192611952,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 192611952,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 192611952,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 192611952,
+            "mean": 26754.704764904724,
+            "p50": 25792.0,
+            "p95": 53776.0,
+            "p99": 67632.0,
+            "max": 87888
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 192611952,
+            "mean": 26754.704764904724,
+            "p50": 25792.0,
+            "p95": 53776.0,
+            "p99": 67632.0,
+            "max": 87888
+          },
+          "nominal_trace_bytes": {
+            "count": 192611952,
+            "mean": 26754.704764904724,
+            "p50": 25792.0,
+            "p95": 53776.0,
+            "p99": 67632.0,
+            "max": 87888
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 6245725,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 6245725,
+            "reference_negatives": 186366227,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 6245725,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 192611952,
+          "hit_root_fallback_trace_sha256": "a4e9171fdd7d1405c605960a4242546525c4eaf7fb21a61e7621c9a9d55a002e",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 537.2676,
+            "mapped_upload_ms": 3.3691,
+            "cpu_build_plus_mapped_upload_ms": 540.6367,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 58929216,
+            "hierarchy_total_bytes": 58929408,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 192611952,
+            "mean": 1.2172059499194525,
+            "p50": 1.0,
+            "p95": 2.0,
+            "p99": 4.0,
+            "max": 57
+          },
+          "hierarchy_node_loads": {
+            "count": 192611952,
+            "mean": 37.47692054956174,
+            "p50": 34.0,
+            "p95": 67.0,
+            "p99": 121.0,
+            "max": 1414
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 192611952,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 192611952,
+            "mean": 619.1060239916991,
+            "p50": 560.0,
+            "p95": 1088.0,
+            "p99": 1984.0,
+            "max": 23264
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 192611952,
+            "mean": 619.1060239916991,
+            "p50": 560.0,
+            "p95": 1088.0,
+            "p99": 1984.0,
+            "max": 23264
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 192611952,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 6245725,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 6245725,
+            "reference_negatives": 186366227,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 6245725,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 192611952,
+          "hit_root_fallback_trace_sha256": "a4e9171fdd7d1405c605960a4242546525c4eaf7fb21a61e7621c9a9d55a002e",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 541.6817,
+            "rgba_build_ms": 537.2676,
+            "r32_projection_and_global_extract_ms": 4.4141,
+            "mapped_upload_ms": 0.8286,
+            "cpu_build_plus_mapped_upload_ms": 542.5103,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 14732304,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 14732512,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 192611952,
+            "mean": 3.837016401765141,
+            "p50": 3.0,
+            "p95": 9.0,
+            "p99": 14.0,
+            "max": 79
+          },
+          "hierarchy_node_loads": {
+            "count": 192611952,
+            "mean": 24.067142946560242,
+            "p50": 22.0,
+            "p95": 35.0,
+            "p99": 48.0,
+            "max": 260
+          },
+          "hierarchy_level_record_loads": {
+            "count": 192611952,
+            "mean": 24.067142946560242,
+            "p50": 22.0,
+            "p95": 35.0,
+            "p99": 48.0,
+            "max": 260
+          },
+          "hierarchy_global_record_loads": {
+            "count": 192611952,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 192611952,
+            "mean": 157.66083421448323,
+            "p50": 136.0,
+            "p95": 292.0,
+            "p99": 392.0,
+            "max": 2148
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 192611952,
+            "mean": 558.7351213594471,
+            "p50": 504.0,
+            "p95": 860.0,
+            "p99": 1140.0,
+            "max": 5892
+          },
+          "nominal_trace_bytes": {
+            "count": 192611952,
+            "mean": 157.66083421448323,
+            "p50": 136.0,
+            "p95": 292.0,
+            "p99": 392.0,
+            "max": 2148
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 414,
+            "p50": 1262.8207243777485,
+            "p95": 1640.987086238921,
+            "p99": 1694.1702380655042
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 414,
+            "p50": 20.16144482027721,
+            "p95": 22.320447371733856,
+            "p99": 23.01360438606108
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 18,
+            "p50": 1243.340295165845,
+            "p95": 1313.1610590862365,
+            "p99": 1317.3668944002216
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 18,
+            "p50": 20.34031200341034,
+            "p95": 23.316800211992167,
+            "p99": 23.403588751539974
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.013632827514799176
+        },
+        "paired_p95_reduction_percent": 98.63671724852009,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.013868609971458726,
+            "ci_level": 0.95,
+            "ci_low": 0.013743666932092422,
+            "ci_high": 0.014100031783747052,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 98.61313900285413,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.013397045058139623,
+            "ci_level": 0.95,
+            "ci_low": 0.01327203820893682,
+            "ci_high": 0.013480345106781422,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 98.66029549418603,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.013794261232473445,
+            0.013748301592319732,
+            0.013729563428852256,
+            0.013761081701408152,
+            0.014445762953115495,
+            0.013746759212320478
+          ],
+          [
+            0.013105232190239987,
+            0.013425266610926311,
+            0.013511687858515285,
+            0.01349241849362306,
+            0.013403022037919444,
+            0.013448824630963934
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 414,
+            "p50": 40.82929587819099,
+            "p95": 50.247871169078635,
+            "p99": 53.230076304604225
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 414,
+            "p50": 20.05673128116703,
+            "p95": 22.367479922668934,
+            "p99": 28.54581388641403
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 18,
+            "p50": 43.41769425249767,
+            "p95": 53.87429425762625,
+            "p99": 55.125086935422644
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 18,
+            "p50": 20.394960439576153,
+            "p95": 24.165078837115566,
+            "p99": 28.54907768841767
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.45667483406839515
+        },
+        "paired_p95_reduction_percent": 54.332516593160484,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.41645939140538113,
+            "ci_level": 0.95,
+            "ci_low": 0.39210154180668977,
+            "ci_high": 0.4523958740967404,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 58.35406085946189,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.49689027673140923,
+            "ci_level": 0.95,
+            "ci_low": 0.49620395185944854,
+            "ci_high": 0.4974562675292228,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 50.31097232685908,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.40965965767922957,
+            0.37985575273745725,
+            0.3977286442066387,
+            0.393733417266003,
+            0.42339529760512734,
+            0.5056603242876352
+          ],
+          [
+            0.4973368018879316,
+            0.4971067982275273,
+            0.4977737652637104,
+            0.4974100288534235,
+            0.4954963520206089,
+            0.49622162710460466
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1640.987086238921,
+        "hiz_minmax": 50.247871169078635,
+        "hiz_min_stackless": 22.320447371733856
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 559.4525,
+            "rgba_build_ms": 554.76985,
+            "r32_projection_and_global_extract_ms": 4.682650000000001,
+            "mapped_upload_ms": 0.8288,
+            "cpu_build_plus_mapped_upload_ms": 560.2813,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 14732304,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 14732512,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 554.76985,
+            "mapped_upload_ms": 3.2715,
+            "cpu_build_plus_mapped_upload_ms": 558.04135,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 58929216,
+            "hierarchy_total_bytes": 58929408,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    },
+    {
+      "scene": "41069042",
+      "label": "ARKit-41069042",
+      "dataset": "ARKitScenes",
+      "resolution": [
+        1920,
+        1440
+      ],
+      "valid_pixels": 2524583,
+      "pixel_frame_queries_per_method": 181769976,
+      "logical_bytes_reduction_vs_dda_percent": 97.434570412295,
+      "counts": {
+        "dda": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 16241307,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 16241307,
+            "reference_negatives": 165528669,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 16241307,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 181769976,
+          "hit_root_fallback_trace_sha256": "32de885156cfb3370250c1abcb0387e3ac9ab123a037d569acf7495608954a63",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": null,
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 181769976,
+            "mean": 1553.2602523862356,
+            "p50": 1503.0,
+            "p95": 3231.0,
+            "p99": 4065.0,
+            "max": 5493
+          },
+          "hierarchy_node_loads": {
+            "count": 181769976,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_level_record_loads": {
+            "count": 181769976,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "hierarchy_global_record_loads": {
+            "count": 181769976,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 181769976,
+            "mean": 24852.16403817977,
+            "p50": 24048.0,
+            "p95": 51696.0,
+            "p99": 65040.0,
+            "max": 87888
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 181769976,
+            "mean": 24852.16403817977,
+            "p50": 24048.0,
+            "p95": 51696.0,
+            "p99": 65040.0,
+            "max": 87888
+          },
+          "nominal_trace_bytes": {
+            "count": 181769976,
+            "mean": 24852.16403817977,
+            "p50": 24048.0,
+            "p95": 51696.0,
+            "p99": 65040.0,
+            "max": 87888
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        },
+        "hiz_minmax": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 16241307,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 16241307,
+            "reference_negatives": 165528669,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 16241307,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 181769976,
+          "hit_root_fallback_trace_sha256": "32de885156cfb3370250c1abcb0387e3ac9ab123a037d569acf7495608954a63",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 563.8888,
+            "mapped_upload_ms": 3.1511,
+            "cpu_build_plus_mapped_upload_ms": 567.0399,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 58929216,
+            "hierarchy_total_bytes": 58929408,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "RGBA Hi-Z does not instrument level-table reads. Its recorded triangle-plus-node payload is a lower bound; level-read counts and total traversal-record bytes are unavailable. GPU timings are unaffected. These byte counts are not physical DRAM traffic.",
+          "packed_field_loads": {
+            "count": 181769976,
+            "mean": 1.7193341049899242,
+            "p50": 1.0,
+            "p95": 4.0,
+            "p99": 8.0,
+            "max": 84
+          },
+          "hierarchy_node_loads": {
+            "count": 181769976,
+            "mean": 68.50589920856896,
+            "p50": 47.0,
+            "p95": 192.0,
+            "p99": 300.0,
+            "max": 1769
+          },
+          "hierarchy_level_record_loads": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "hierarchy_global_record_loads": {
+            "count": 181769976,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "streaming_payload_bytes": {
+            "count": 181769976,
+            "mean": 1123.6037330169422,
+            "p50": 768.0,
+            "p95": 3136.0,
+            "p99": 4896.0,
+            "max": 29440
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 0,
+            "mean": null,
+            "p50": null,
+            "p95": null,
+            "p99": null,
+            "max": null
+          },
+          "nominal_trace_bytes": {
+            "count": 181769976,
+            "mean": 1123.6037330169422,
+            "p50": 768.0,
+            "p95": 3136.0,
+            "p99": 4896.0,
+            "max": 29440
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0,
+          "hierarchy_stats_reserved_word3": {
+            "count": 181769976,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0
+          },
+          "byte_accounting": {
+            "hierarchy_level_record_loads": "not_instrumented",
+            "hierarchy_stats_word3": "reserved_zero; not a level-read counter",
+            "trace_record_total_available": false,
+            "streaming_payload_is_lower_bound": true,
+            "streaming_payload_scope": "16*triangle_record_reads + 16*RGBA_node_record_reads",
+            "unaccounted_traversal_record_reads": [
+              "hierarchy level-table records"
+            ],
+            "common_query_input_and_output_bytes": "excluded",
+            "physical_dram_traffic": "not_measured"
+          }
+        },
+        "hiz_min_stackless": {
+          "query_instrumentation_enabled": true,
+          "correctness_passed": true,
+          "invalid_output_count": 0,
+          "visibility_mismatches": 0,
+          "visibility_confusion": {
+            "true_positives": 16241307,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "reference_positives": 16241307,
+            "reference_negatives": 165528669,
+            "false_positive_rate": 0.0,
+            "false_negative_rate": 0.0
+          },
+          "balanced_visibility_error": 0.0,
+          "shadow_f1": 1.0,
+          "root_mismatches_over_tolerance": 0,
+          "root_tolerance": 5e-05,
+          "first_root_error": {
+            "count": 16241307,
+            "mean": 0.0,
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "valid_pixel_frame_comparisons": 181769976,
+          "hit_root_fallback_trace_sha256": "32de885156cfb3370250c1abcb0387e3ac9ab123a037d569acf7495608954a63",
+          "hierarchy_stats_triangle_disagreements": 0,
+          "hierarchy_initialization": {
+            "cpu_build_ms": 568.593,
+            "rgba_build_ms": 563.8888,
+            "r32_projection_and_global_extract_ms": 4.7042,
+            "mapped_upload_ms": 0.787,
+            "cpu_build_plus_mapped_upload_ms": 569.38,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 14732304,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 14732512,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          },
+          "evaluation_mode": "frame-streamed spatial comparison; timings diagnostic, not paired performance",
+          "aggregation": "all pixel-frames; exact integer frequencies and disk-backed exact root quantiles; no sampling",
+          "byte_scope": "logical traversal-record reads, not measured physical DRAM traffic",
+          "packed_field_loads": {
+            "count": 181769976,
+            "mean": 3.742120233321701,
+            "p50": 3.0,
+            "p95": 11.0,
+            "p99": 23.0,
+            "max": 185
+          },
+          "hierarchy_node_loads": {
+            "count": 181769976,
+            "mean": 28.08454228436494,
+            "p50": 24.0,
+            "p95": 56.0,
+            "p99": 80.0,
+            "max": 314
+          },
+          "hierarchy_level_record_loads": {
+            "count": 181769976,
+            "mean": 28.08454228436494,
+            "p50": 24.0,
+            "p95": 56.0,
+            "p99": 80.0,
+            "max": 314
+          },
+          "hierarchy_global_record_loads": {
+            "count": 181769976,
+            "mean": 1.0,
+            "p50": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "max": 1
+          },
+          "streaming_payload_bytes": {
+            "count": 181769976,
+            "mean": 172.21209287060697,
+            "p50": 136.0,
+            "p95": 388.0,
+            "p99": 656.0,
+            "max": 4176
+          },
+          "conservative_logical_trace_bytes": {
+            "count": 181769976,
+            "mean": 637.5647694204459,
+            "p50": 528.0,
+            "p95": 1296.0,
+            "p99": 1932.0,
+            "max": 9056
+          },
+          "nominal_trace_bytes": {
+            "count": 181769976,
+            "mean": 172.21209287060697,
+            "p50": 136.0,
+            "p95": 388.0,
+            "p99": 656.0,
+            "max": 4176
+          },
+          "fallback_rate_rho": 0.0,
+          "hierarchy_exact_dda_fallback_rate": 0.0,
+          "hierarchy_watchdog_fallback_rate": 0.0,
+          "hierarchy_boundary_ownership_fallback_rate": 0.0
+        }
+      },
+      "paired_vs_dda": {
+        "warm_ms": {
+          "dda": {
+            "count_per_campaign": 414,
+            "p50": 1085.185559443711,
+            "p95": 1587.8605549838721,
+            "p99": 1672.0663961572322
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 414,
+            "p50": 23.83581973057079,
+            "p95": 32.48859295682144,
+            "p99": 35.322542887633205
+          }
+        },
+        "cold_ms": {
+          "dda": {
+            "count_per_campaign": 18,
+            "p50": 1023.037878669322,
+            "p95": 1200.8200344851873,
+            "p99": 1207.2567124530417
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 18,
+            "p50": 24.910507204333307,
+            "p95": 28.085988897640224,
+            "p99": 29.478218030316924
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.02024147818429662
+        },
+        "paired_p95_reduction_percent": 97.97585218157033,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.020407776868702703,
+            "ci_level": 0.95,
+            "ci_low": 0.020125917311630315,
+            "ci_high": 0.02077413112710729,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 97.95922231312973,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/dda p95 ratios",
+            "point": 0.02007517949989054,
+            "ci_level": 0.95,
+            "ci_low": 0.019744995541072577,
+            "ci_high": 0.020337821994112975,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 97.99248205001095,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.02029991170419935,
+            0.02033629337154639,
+            0.020363271001482035,
+            0.020330504073800916,
+            0.019912697209534428,
+            0.021226698840443665
+          ],
+          [
+            0.019814313729187488,
+            0.019356560004036273,
+            0.020330533644806113,
+            0.020355138687148486,
+            0.020370569737208563,
+            0.020245261456758788
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "paired_vs_hiz": {
+        "warm_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 414,
+            "p50": 71.08201649376582,
+            "p95": 98.11348197965125,
+            "p99": 110.83019703376792
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 414,
+            "p50": 23.711457754440307,
+            "p95": 33.30515934313573,
+            "p99": 38.02019907177247
+          }
+        },
+        "cold_ms": {
+          "hiz_minmax": {
+            "count_per_campaign": 18,
+            "p50": 74.21451641728878,
+            "p95": 80.47190949368704,
+            "p99": 87.53923432114493
+          },
+          "hiz_min_stackless": {
+            "count_per_campaign": 18,
+            "p50": 23.894465562472345,
+            "p95": 27.255514959582136,
+            "p99": 28.019310774268106
+          }
+        },
+        "paired_p95_ratio": {
+          "point": 0.33820447998583114
+        },
+        "paired_p95_reduction_percent": 66.17955200141688,
+        "per_campaign_ratio_and_ci": [
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.3396491120107594,
+            "ci_level": 0.95,
+            "ci_low": 0.3278247912418231,
+            "ci_high": 0.35466301329915995,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.03508879892405,
+            "ci_excludes_one_in_favor_of_candidate": true
+          },
+          {
+            "estimand": "geometric mean of per-repeat candidate/hiz_minmax p95 ratios",
+            "point": 0.33675984796090286,
+            "ci_level": 0.95,
+            "ci_low": 0.33662891440787585,
+            "ci_high": 0.33690894370864577,
+            "bootstrap_samples": 10000,
+            "seed": 2701,
+            "reduction_percent_at_point": 66.32401520390971,
+            "ci_excludes_one_in_favor_of_candidate": true
+          }
+        ],
+        "per_campaign_repeats": [
+          [
+            0.3226319895906307,
+            0.3233581354964595,
+            0.34015555846783346,
+            0.34460218139753057,
+            0.335266955812871,
+            0.37445991732861733
+          ],
+          [
+            0.33665952500242197,
+            0.3366435415627626,
+            0.3365372996509525,
+            0.33675232859983634,
+            0.33704567755908654,
+            0.33692098384867836
+          ]
+        ],
+        "all_campaign_ci_upper_bounds_below_one": true
+      },
+      "headline_p95_ms": {
+        "dda": 1587.8605549838721,
+        "hiz_minmax": 98.11348197965125,
+        "hiz_min_stackless": 32.48859295682144
+      },
+      "initialization_observations": {
+        "scope": "counting-pass one-time CPU build and mapped upload; excludes device and pipeline creation",
+        "lighttrace": {
+          "instrumented": {
+            "cpu_build_ms": 559.7418499999999,
+            "rgba_build_ms": 554.70875,
+            "r32_projection_and_global_extract_ms": 5.0331,
+            "mapped_upload_ms": 0.8132,
+            "cpu_build_plus_mapped_upload_ms": 560.5550499999999,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 14732304,
+            "root_global_bytes": 16,
+            "hierarchy_total_bytes": 14732512,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "R32F(outward_min_depth)",
+            "root_global_format": "RGBA32F(outward_min_depth,outward_max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy of level records, R32 nodes, and one global record into persistently mapped coherent buffers",
+            "shared_rgba_hierarchy_excluded_from_method_bytes": true
+          }
+        },
+        "rgba_hiz": {
+          "instrumented": {
+            "cpu_build_ms": 554.70875,
+            "mapped_upload_ms": 3.21585,
+            "cpu_build_plus_mapped_upload_ms": 557.9246,
+            "level_count": 12,
+            "node_count": 3683076,
+            "level_metadata_bytes": 192,
+            "node_bytes": 58929216,
+            "hierarchy_total_bytes": 58929408,
+            "instrumentation_stats_buffer_bytes": 44236800,
+            "node_format": "RGBA32F(min_depth,max_depth,max_abs_du,max_abs_dv)",
+            "level_info_format": "uint4(width_cells,height_cells,node_offset,cell_span)",
+            "upload_scope": "host memcpy into persistently mapped coherent buffers"
+          }
+        }
+      }
+    }
+  ],
+  "ablation": {
+    "local_over_restart_p95_ratio": 0.4043290169436981,
+    "per_campaign_equal_scene_geomeans": [
+      0.40390773408072017,
+      0.40475029980667604
+    ],
+    "local_over_restart_bytes_ratio": 0.5731344870116802,
+    "rows": [
+      {
+        "scene": "Pipes-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.7002213370714188,
+              "p95": 0.8254348756811142,
+              "p99": 0.8826262805348395
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.30526040921401976,
+              "p95": 0.3411080645888328,
+              "p99": 0.3713669180167577
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.7559635232105255,
+              "p95": 0.7862499808044434,
+              "p99": 0.814837219689846
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.32450520041084285,
+              "p95": 0.34738931443548204,
+              "p99": 0.3583658766674995
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.41108957625191367
+          },
+          "paired_p95_reduction_percent": 58.891042374808634,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.409127540604652,
+              "ci_level": 0.95,
+              "ci_low": 0.4070900420521415,
+              "ci_high": 0.4111407766185439,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 59.0872459395348,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.41305161189917533,
+              "ci_level": 0.95,
+              "ci_low": 0.4017235109376524,
+              "ci_high": 0.42656513828892506,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 58.69483881008246,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.4103596248053773,
+              0.41600214007286435,
+              0.412055361201195,
+              0.41084958076573397,
+              0.40533005124083193,
+              0.40830788804071255,
+              0.402345477752082,
+              0.4113712799035472,
+              0.41018029199882283,
+              0.4060891063873171,
+              0.4113410881417827,
+              0.405488076878959
+            ],
+            [
+              0.41345625183802376,
+              0.41116109080685975,
+              0.4097446433812738,
+              0.41523191448749763,
+              0.415347013595397,
+              0.40551045635856203,
+              0.4102177468820282,
+              0.410961173337411,
+              0.41320339995171973,
+              0.41118986117650047,
+              0.3723051771117167,
+              0.4747582561404845
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      },
+      {
+        "scene": "Playtable-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.6404036301984788,
+              "p95": 0.7671497208540916,
+              "p99": 0.8097893031464195
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.2737499933166504,
+              "p95": 0.31515624230575556,
+              "p99": 0.3316367106534004
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.6373437344398498,
+              "p95": 0.8110156051998139,
+              "p99": 0.8141705530394554
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.2766145765800476,
+              "p95": 0.3282617107357979,
+              "p99": 0.33563931472234726
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.41117910165394744
+          },
+          "paired_p95_reduction_percent": 58.88208983460525,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.4088535055062697,
+              "ci_level": 0.95,
+              "ci_low": 0.40656853403690235,
+              "ci_high": 0.41201326484596673,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 59.11464944937303,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.41350469780162524,
+              "ci_level": 0.95,
+              "ci_low": 0.4102279413005422,
+              "ci_high": 0.4166301929944491,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 58.64953021983747,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.40835114252835764,
+              0.40946667942008397,
+              0.41294960096206407,
+              0.40381353056931546,
+              0.40755558559167404,
+              0.40554830642092105,
+              0.4056165223911117,
+              0.4079753761969905,
+              0.40556603773584904,
+              0.40848516326558504,
+              0.4076195586558454,
+              0.4236532457085203
+            ],
+            [
+              0.41221810654755425,
+              0.41448982342633783,
+              0.4194705658531282,
+              0.41657503563429044,
+              0.4155015405682986,
+              0.4205398018448925,
+              0.4022112595088171,
+              0.41616084459782027,
+              0.40776567495800137,
+              0.4054934697724518,
+              0.41988792080827925,
+              0.41219869417030536
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      },
+      {
+        "scene": "Motorcycle-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.680690087548256,
+              "p95": 0.8087330531722067,
+              "p99": 0.8641182080700291
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.28290363892650605,
+              "p95": 0.32491405456752775,
+              "p99": 0.34352915827972386
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.6974088371400833,
+              "p95": 0.7798437309608459,
+              "p99": 0.7860051891437531
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.289414055434227,
+              "p95": 0.3119596278004646,
+              "p99": 0.33809113757915493
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.3998450274622369
+          },
+          "paired_p95_reduction_percent": 60.0154972537763,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.40086257420813076,
+              "ci_level": 0.95,
+              "ci_low": 0.3905792278833455,
+              "ci_high": 0.40908554027291366,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 59.91374257918692,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.398827480716343,
+              "ci_level": 0.95,
+              "ci_low": 0.39211997210198374,
+              "ci_high": 0.40394305579015277,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 60.117251928365704,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.4022192839179694,
+              0.4032108352616647,
+              0.4144418819789183,
+              0.4251021193648114,
+              0.39537653688524593,
+              0.3562317574866126,
+              0.39902134655464794,
+              0.395897369944055,
+              0.39940373899911474,
+              0.4125297362298382,
+              0.40207786783612,
+              0.40878440187135723
+            ],
+            [
+              0.3970831823593354,
+              0.36814284869626923,
+              0.40058559795040716,
+              0.39814875001625044,
+              0.40184432635198497,
+              0.4009142975882804,
+              0.39739279411575273,
+              0.40570722828913164,
+              0.41418615254347674,
+              0.40339625580972654,
+              0.398130985480383,
+              0.4020562490288495
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      },
+      {
+        "scene": "Sticks-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.5767447775859833,
+              "p95": 0.8164348759008406,
+              "p99": 0.8709820099857895
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.25722655622005464,
+              "p95": 0.3278645753288269,
+              "p99": 0.34067707501602174
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.6950781080303192,
+              "p95": 0.8365624795761109,
+              "p99": 0.8386145628593444
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.28179686812019344,
+              "p95": 0.3386783771481514,
+              "p99": 0.3457994707242965
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.39990319936342
+          },
+          "paired_p95_reduction_percent": 60.009680063658,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.4003373300140594,
+              "ci_level": 0.95,
+              "ci_low": 0.39815089283035504,
+              "ci_high": 0.40241112978589183,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 59.966266998594065,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.39946906871278065,
+              "ci_level": 0.95,
+              "ci_low": 0.3866662718645522,
+              "ci_high": 0.40707569921761666,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 60.05309312872193,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.4025793750946444,
+              0.39200372270852196,
+              0.40173668092364545,
+              0.4017116082146868,
+              0.39929596464406397,
+              0.39762887123064383,
+              0.3967997538272174,
+              0.4004418243234565,
+              0.39865838572685647,
+              0.4018605971458801,
+              0.40815826465998634,
+              0.40339164447615533
+            ],
+            [
+              0.4129552582730589,
+              0.40145627939944584,
+              0.4083842167376468,
+              0.40725102669404517,
+              0.4070147028583179,
+              0.3374312278756344,
+              0.4042460839259042,
+              0.4027299809954286,
+              0.4069296265900697,
+              0.4054472499258131,
+              0.40229430883946216,
+              0.40352716995127436
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      },
+      {
+        "scene": "Shelves-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.5945572771511078,
+              "p95": 0.7747877415009499,
+              "p99": 0.8027510220682523
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.26010416031646727,
+              "p95": 0.29679686775398256,
+              "p99": 0.3082497320577048
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.6310286304273606,
+              "p95": 0.7291796696977615,
+              "p99": 0.73215493004179
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.26031249364471437,
+              "p95": 0.3017187426338196,
+              "p99": 0.30482421130800247
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.3818709428814462
+          },
+          "paired_p95_reduction_percent": 61.81290571185538,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.3829758599811761,
+              "ci_level": 0.95,
+              "ci_low": 0.3799003671744727,
+              "ci_high": 0.3862888874764391,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 61.70241400188239,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.3807660257817163,
+              "ci_level": 0.95,
+              "ci_low": 0.3775499264030896,
+              "ci_high": 0.3838479206550546,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 61.923397421828376,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.388557662543908,
+              0.3769265117789534,
+              0.38848920863309355,
+              0.38315664535620836,
+              0.3790597656829304,
+              0.3858961406344716,
+              0.3749140012680598,
+              0.3813127225639366,
+              0.3928823881246261,
+              0.37653218768879637,
+              0.3794169017869139,
+              0.38906027845588426
+            ],
+            [
+              0.38817723362368867,
+              0.3811151886369037,
+              0.38522959494390385,
+              0.375129324823648,
+              0.3801812948866234,
+              0.3840687756061522,
+              0.3711575408261288,
+              0.37704392004813153,
+              0.38207098132282147,
+              0.3856196050134959,
+              0.37217479322882663,
+              0.38771376835892957
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      },
+      {
+        "scene": "Adirondack-perfect",
+        "paired": {
+          "warm_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 8604,
+              "p50": 0.6454557134084702,
+              "p95": 0.9117408631573677,
+              "p99": 0.9830705489159202
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 8604,
+              "p50": 0.2958593677768707,
+              "p95": 0.38616014682226174,
+              "p99": 0.4078101462936973
+            }
+          },
+          "cold_ms": {
+            "r32_coarsest_restart": {
+              "count_per_campaign": 36,
+              "p50": 0.7027864411754609,
+              "p95": 0.7655077938108443,
+              "p99": 0.7693893041327476
+            },
+            "r32_local_ascent": {
+              "count_per_campaign": 36,
+              "p50": 0.3092187424507141,
+              "p95": 0.3250650962305069,
+              "p99": 0.33578645013542174
+            }
+          },
+          "paired_p95_ratio": {
+            "point": 0.42334450224151965
+          },
+          "paired_p95_reduction_percent": 57.665549775848035,
+          "per_campaign_ratio_and_ci": [
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.4223510465218786,
+              "ci_level": 0.95,
+              "ci_low": 0.41926353936568844,
+              "ci_high": 0.4256741300467677,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 57.76489534781214,
+              "ci_excludes_one_in_favor_of_candidate": true
+            },
+            {
+              "estimand": "geometric mean of per-repeat candidate/r32_coarsest_restart p95 ratios",
+              "point": 0.4243379579611607,
+              "ci_level": 0.95,
+              "ci_low": 0.4206123463425193,
+              "ci_high": 0.42857361859801735,
+              "bootstrap_samples": 10000,
+              "seed": 2701,
+              "reduction_percent_at_point": 57.56620420388393,
+              "ci_excludes_one_in_favor_of_candidate": true
+            }
+          ],
+          "per_campaign_repeats": [
+            [
+              0.41936994562982577,
+              0.42740827144952476,
+              0.4338124619397239,
+              0.4283479492098291,
+              0.4170454805034607,
+              0.42201097563775797,
+              0.4192972416161153,
+              0.4185655456417296,
+              0.4145926280303956,
+              0.4235286077160529,
+              0.42822969232346475,
+              0.41645703618544616
+            ],
+            [
+              0.41415703757619865,
+              0.4179682116771557,
+              0.42667530312844465,
+              0.4199225056506296,
+              0.43362354130294956,
+              0.4290440715092467,
+              0.42186426706965235,
+              0.4309925425122484,
+              0.42075800679085995,
+              0.4185626292701775,
+              0.4198128834005414,
+              0.439401741677824
+            ]
+          ],
+          "all_campaign_ci_upper_bounds_below_one": true
+        }
+      }
+    ],
+    "p95_reduction_percent": 59.56709830563018,
+    "logical_bytes_reduction_percent": 42.68655129883198
+  },
+  "sources": {
+    "reference": {
+      "root": "results/v1_20_eight_scenes",
+      "raw_reports": {
+        "middlebury_counts/report.json": {
+          "sha256": "d02bbd6b05135b126c46d07537218251c915aaa352e76a3a12537fd6cc69eba3",
+          "bytes": 28188308
+        },
+        "arkit_counts/report.json": {
+          "sha256": "f8c2789f609c92dd86e43585e05251ed16dc324c9f1f858d29393f5a26eb1b5a",
+          "bytes": 1026275
+        },
+        "middlebury_vs_dda/report.json": {
+          "sha256": "072d89d25157e50948c46b3fc13de1aee09a5e896c7d3f86749954a353d44f8a",
+          "bytes": 970819
+        },
+        "middlebury_vs_hiz/report.json": {
+          "sha256": "8ecb3ea9c0f0168718db0ee3a41a2073f3849ca603ada980ccc1998f9438d769",
+          "bytes": 974081
+        },
+        "arkit_vs_dda/report.json": {
+          "sha256": "a9f6e350747c11d6fc6ee1a508e930105280c0b91c04748d7c80b046de67d15c",
+          "bytes": 121788
+        },
+        "arkit_vs_hiz/report.json": {
+          "sha256": "7c4eab1bfec6c22e42505bee09e4b307dde56d4f133246519ef8a3ba8e64a5c7",
+          "bytes": 122607
+        },
+        "traversal_ablation/timing_report.json": {
+          "sha256": "3a0441c3d22f671475f54e9ea669289633ccf4abd1e64200ef1e220d09aef074",
+          "bytes": 41983620
+        },
+        "inputs/manifest.json": {
+          "sha256": "5145d6a57886577e21160b8a50ce37d690669907420504288eca967ee7a06092",
+          "bytes": 43245
+        }
+      },
+      "saved_summary_sha256": "d8011ae65a2c7847fe7a864fb896ca49b9bb96ac24c505fb67433b28dc7509d4"
+    },
+    "replication": {
+      "root": "results/v1_20_replication_20260912",
+      "raw_reports": {
+        "middlebury_counts/report.json": {
+          "sha256": "68d42e49904d1bd5c92e2564e332aa0c93b368e3496f82d40fcede6e4655118f",
+          "bytes": 28196095
+        },
+        "arkit_counts/report.json": {
+          "sha256": "953022d875fd38433e9fd7ee2bf37fbd12955191855d0444d2907b4437b93ae0",
+          "bytes": 1027637
+        },
+        "middlebury_vs_dda/report.json": {
+          "sha256": "9d16a9ac9f16d47fdc7175eec74dae9d911a155b6a70054ddbcb93a9c9d6da60",
+          "bytes": 972206
+        },
+        "middlebury_vs_hiz/report.json": {
+          "sha256": "fd0b58e857e16d68236b5cff2d425cfc8b85c984221e0523b82102d261300add",
+          "bytes": 975391
+        },
+        "arkit_vs_dda/report.json": {
+          "sha256": "a0b8e8afc7cf62aca8ddac2f4ed619fcef48d7ce2ab57d7ce460d6387476be69",
+          "bytes": 122250
+        },
+        "arkit_vs_hiz/report.json": {
+          "sha256": "2cce085116039309f358dbaf10cf81b32e66af235d0350b16bb5be505b3db1f0",
+          "bytes": 123090
+        },
+        "traversal_ablation/timing_report.json": {
+          "sha256": "b32007f8acd13c6c0e00543dd69c5c448c2ce7ffe8df05378e74cc1ae75766af",
+          "bytes": 41985926
+        },
+        "inputs/manifest.json": {
+          "sha256": "bfce052ff820a39b122fcc7fd15d3b6bbaf49da158adc338822ee3cd07602cfd",
+          "bytes": 43703
+        }
+      },
+      "saved_summary_sha256": "a06ff4721cfca5e00ed0b9fd866f59a3fd68834ce3045041453ab7f4439a977d"
+    }
+  },
+  "deterministic_checks_passed": 73
+}

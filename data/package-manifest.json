@@ -1,0 +1,602 @@
+{
+  "schema": "lighttrace-supplemental-package-v1",
+  "policy": "Read-only source evidence export; no GPU runs. Numerical, boolean and null JSON values are unchanged. Public JSON paths are repository-relative provenance identifiers, not promises that original reports are bundled. Runtime paths are redacted. Each source hash refers to the untouched original; each public hash refers to the delivered artifact. README is author-owned and excluded from generated-file hashes.",
+  "campaign_count": 2,
+  "input_count": 8,
+  "file_count": 39,
+  "total_bytes_excluding_manifest_and_readme": 21395506,
+  "sanitized_strings": 521,
+  "files": [
+    {
+      "path": "assets/inputs.png",
+      "bytes": 1271567,
+      "public_sha256": "419af07196f29da99940b7d100016151024416650a8f6942469cc2f1d8b7fb3e",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/inputs/overview.png",
+          "sha256": "419af07196f29da99940b7d100016151024416650a8f6942469cc2f1d8b7fb3e",
+          "bytes": 1271567
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/method.png",
+      "bytes": 446849,
+      "public_sha256": "79f11e92fd526c85b718dfaa86986a92c77011e29085096d874e2532845d7032",
+      "sources": [
+        {
+          "path": "paper/figures/method_linked_real.png",
+          "sha256": "79f11e92fd526c85b718dfaa86986a92c77011e29085096d874e2532845d7032",
+          "bytes": 446849
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/application.png",
+      "bytes": 386668,
+      "public_sha256": "d68cc499f1159e0e64505d73680f09fe3b142b4c461bc7fb6e8495ff939dc2a4",
+      "sources": [
+        {
+          "path": "paper/figures/app_demo_playtable_compact.png",
+          "sha256": "d68cc499f1159e0e64505d73680f09fe3b142b4c461bc7fb6e8495ff939dc2a4",
+          "bytes": 386668
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/results.json",
+      "bytes": 185615,
+      "public_sha256": "1e1ab2f3352293445737f5b562a4986c01ee6cfec714a2f246be6164ec6f93f0",
+      "sources": [
+        {
+          "path": "results/v1_20_two_campaign_mean/final_report.json",
+          "sha256": "cc16004bbb1cf6e19da1a94798a63c0a352b66128e9f4d1ff34d4ba1ae35aad1",
+          "bytes": 190862
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 2
+    },
+    {
+      "path": "data/replication-checks.json",
+      "bytes": 212264,
+      "public_sha256": "2974572ef623017e7f8214eb1362596629f803834b9b1cf56e80e745e889c43e",
+      "sources": [
+        {
+          "path": "results/v1_20_two_campaign_mean/comparison.json",
+          "sha256": "f6ecc132c82e0a4137e2492cc85b30b2da89259193ae0817b6b72e206f7bbf55",
+          "bytes": 218799
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 20
+    },
+    {
+      "path": "assets/run-1/Pipes-perfect_warm_trajectory_latency.png",
+      "bytes": 291324,
+      "public_sha256": "103d0450d364ff581f0adb653bdcb7742a8cc7468908fce3685112fcbede9ad7",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Pipes-perfect_warm_trajectory_latency.png",
+          "sha256": "103d0450d364ff581f0adb653bdcb7742a8cc7468908fce3685112fcbede9ad7",
+          "bytes": 291324
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/Playtable-perfect_warm_trajectory_latency.png",
+      "bytes": 277751,
+      "public_sha256": "06d6cdd8750a6f9d9bf22ec3c5c7cc8f643bc89169b5b15f78b3630379f18f2c",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Playtable-perfect_warm_trajectory_latency.png",
+          "sha256": "06d6cdd8750a6f9d9bf22ec3c5c7cc8f643bc89169b5b15f78b3630379f18f2c",
+          "bytes": 277751
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/Motorcycle-perfect_warm_trajectory_latency.png",
+      "bytes": 284759,
+      "public_sha256": "436531ebdc1aefb6fa98160b01cd7103c78736ec8a830dfa3e3e6db5e20f2f26",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Motorcycle-perfect_warm_trajectory_latency.png",
+          "sha256": "436531ebdc1aefb6fa98160b01cd7103c78736ec8a830dfa3e3e6db5e20f2f26",
+          "bytes": 284759
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/Sticks-perfect_warm_trajectory_latency.png",
+      "bytes": 265720,
+      "public_sha256": "8023f95ad3f27391403216bf882ef864870bc61a80261a087c4d5052319e6397",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Sticks-perfect_warm_trajectory_latency.png",
+          "sha256": "8023f95ad3f27391403216bf882ef864870bc61a80261a087c4d5052319e6397",
+          "bytes": 265720
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/Shelves-perfect_warm_trajectory_latency.png",
+      "bytes": 263687,
+      "public_sha256": "520791a0d00dcf8c8641c0a6a4db134f2d2eee07df62400ea911936876f440f9",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Shelves-perfect_warm_trajectory_latency.png",
+          "sha256": "520791a0d00dcf8c8641c0a6a4db134f2d2eee07df62400ea911936876f440f9",
+          "bytes": 263687
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/Adirondack-perfect_warm_trajectory_latency.png",
+      "bytes": 272054,
+      "public_sha256": "4f0530fca71bfbde728a3b4acdc0c29860b92df4dd10d863d93bc44e359c07dc",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/Adirondack-perfect_warm_trajectory_latency.png",
+          "sha256": "4f0530fca71bfbde728a3b4acdc0c29860b92df4dd10d863d93bc44e359c07dc",
+          "bytes": 272054
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/41069021_warm_trajectory_latency.png",
+      "bytes": 199690,
+      "public_sha256": "c0b46e9529058b4a914d243eaa48d27ac3859592e46bb4de5ae79bdeda5e738e",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/41069021_warm_trajectory_latency.png",
+          "sha256": "c0b46e9529058b4a914d243eaa48d27ac3859592e46bb4de5ae79bdeda5e738e",
+          "bytes": 199690
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-1/41069042_warm_trajectory_latency.png",
+      "bytes": 213089,
+      "public_sha256": "cc4ccef989c1d047f2c404bfcea80c988c51a1dc3984d99d2c5a2b3b02a5d09c",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/41069042_warm_trajectory_latency.png",
+          "sha256": "cc4ccef989c1d047f2c404bfcea80c988c51a1dc3984d99d2c5a2b3b02a5d09c",
+          "bytes": 213089
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-1/summary.json",
+      "bytes": 395433,
+      "public_sha256": "ec9d6c06d205f72cb1c3eec2a6fa878450dae0f86192f472e4b325799e23f520",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/summary/final_report.json",
+          "sha256": "d8011ae65a2c7847fe7a864fb896ca49b9bb96ac24c505fb67433b28dc7509d4",
+          "bytes": 409738
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 109
+    },
+    {
+      "path": "data/run-1/inputs.json",
+      "bytes": 41997,
+      "public_sha256": "96d79b6195ccc88f46525ddccb96627278baa68a382760b896b5cfc45a66e761",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/inputs/manifest.json",
+          "sha256": "5145d6a57886577e21160b8a50ce37d690669907420504288eca967ee7a06092",
+          "bytes": 43245
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 2
+    },
+    {
+      "path": "data/run-1/latency-curves.csv",
+      "bytes": 2689008,
+      "public_sha256": "b6010e61c2db3d66004ff073a61605830e16c6786e8c973f98c60c74d27060ed",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/latency_curves.csv",
+          "sha256": "b6010e61c2db3d66004ff073a61605830e16c6786e8c973f98c60c74d27060ed",
+          "bytes": 2689008
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-1/latency-curves-manifest.json",
+      "bytes": 3633,
+      "public_sha256": "75b2c8bec43b33c389fb4d9e80ad03a5ad81e1bc790cf3b0736a5152873235c0",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/supporting/latency_curves_manifest.json",
+          "sha256": "8ab4eda4e171dd8843bd6abda84bf2466eb18d045eb502bf590b7843504eade2",
+          "bytes": 4190
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 12
+    },
+    {
+      "path": "data/run-1/validation-stress.json",
+      "bytes": 57622,
+      "public_sha256": "574de36243f14e18a737417cba996777726e62c04b6f187140628fc92a6fb4ed",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/gpu_regression.json",
+          "sha256": "151d66b51832d73afd7c452f63570562fb99a77b68f60ec69567b3e4eada2807",
+          "bytes": 59435
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-1/validation-dataset.json",
+      "bytes": 257020,
+      "public_sha256": "ed027fc2d9dcca254bc211c5c10971fc3b987b06858b555d5ee6618f90212f43",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/dataset_regression.json",
+          "sha256": "f3c85bab35508f08b8083e71d3f7ba8e0256793fc27e9c6bf3545e1a6a753c97",
+          "bytes": 270310
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 106
+    },
+    {
+      "path": "data/run-1/validation-ablation.json",
+      "bytes": 57622,
+      "public_sha256": "07de328cdc6c21e9777be2f951337f51364ce63e70e24d23f9d4b7bfbd740694",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/restart_gpu_regression.json",
+          "sha256": "de602694069a8e0fddae92bea6e10917526516470dae793f9470e6a91dc19e14",
+          "bytes": 59435
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-1/raw-timings.zip",
+      "bytes": 3762081,
+      "public_sha256": "92974b40001aa56b3c9e7285d0e95e235724e2cfeeb73c29c9af65976de89f06",
+      "sources": [
+        {
+          "path": "results/v1_20_eight_scenes/middlebury_vs_dda/timings.csv",
+          "sha256": "58f1e2431c8a76198e68e0cb6b948bac1aa6b0437a0d04b8a10b0f35b71aaf6a",
+          "bytes": 8498122
+        },
+        {
+          "path": "results/v1_20_eight_scenes/middlebury_vs_hiz/timings.csv",
+          "sha256": "2ece744605af4f976c177b6d068d2284b27f9519e8254b605853e2a89e526c8c",
+          "bytes": 8867214
+        },
+        {
+          "path": "results/v1_20_eight_scenes/arkit_vs_dda/timings.csv",
+          "sha256": "58e26d92bebac4bfeb3b600eff66e7aec270111fe4c22c926599d8755c51b076",
+          "bytes": 125474
+        },
+        {
+          "path": "results/v1_20_eight_scenes/arkit_vs_hiz/timings.csv",
+          "sha256": "f75ddac64977e2e11a8ae8145b6aa0a599fd57d0f78975f2ad46ad1ba29a5f06",
+          "bytes": 131014
+        },
+        {
+          "path": "results/v1_20_eight_scenes/traversal_ablation/timings.csv",
+          "sha256": "531fa484ff58e923660722d58c6d3539d984c3325b35f2750f9a0d5b0bb3c149",
+          "bytes": 9336055
+        }
+      ],
+      "transformation": "deterministic ZIP of byte-identical CSVs and archive source-hash manifest",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Pipes-perfect_warm_trajectory_latency.png",
+      "bytes": 292347,
+      "public_sha256": "281c2baff8e3c2c76ba9f235785dc1bc255df5bd40ba03d154ce25699aeaac70",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Pipes-perfect_warm_trajectory_latency.png",
+          "sha256": "281c2baff8e3c2c76ba9f235785dc1bc255df5bd40ba03d154ce25699aeaac70",
+          "bytes": 292347
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Playtable-perfect_warm_trajectory_latency.png",
+      "bytes": 289110,
+      "public_sha256": "648874512456e09f835b99f4010b0dba0286ed15e3c33aea682437651c52be1f",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Playtable-perfect_warm_trajectory_latency.png",
+          "sha256": "648874512456e09f835b99f4010b0dba0286ed15e3c33aea682437651c52be1f",
+          "bytes": 289110
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Motorcycle-perfect_warm_trajectory_latency.png",
+      "bytes": 290781,
+      "public_sha256": "b57d476919c57aa1d1450c75caac79071802cfc0e2a5405db0dfd25ba96d87de",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Motorcycle-perfect_warm_trajectory_latency.png",
+          "sha256": "b57d476919c57aa1d1450c75caac79071802cfc0e2a5405db0dfd25ba96d87de",
+          "bytes": 290781
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Sticks-perfect_warm_trajectory_latency.png",
+      "bytes": 275760,
+      "public_sha256": "9d0cb8bc11e3920fc81c0303ae0a1b3c25b5a7d779697171012b3c35b53e0c38",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Sticks-perfect_warm_trajectory_latency.png",
+          "sha256": "9d0cb8bc11e3920fc81c0303ae0a1b3c25b5a7d779697171012b3c35b53e0c38",
+          "bytes": 275760
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Shelves-perfect_warm_trajectory_latency.png",
+      "bytes": 277689,
+      "public_sha256": "a8d1eb3f6a8d3f64cad9e7f31f9a69c1f7fac22bd66d170a415580565552d92a",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Shelves-perfect_warm_trajectory_latency.png",
+          "sha256": "a8d1eb3f6a8d3f64cad9e7f31f9a69c1f7fac22bd66d170a415580565552d92a",
+          "bytes": 277689
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/Adirondack-perfect_warm_trajectory_latency.png",
+      "bytes": 274221,
+      "public_sha256": "58eedbe6a5608d5fcb1d7698ba70d49132166203eafa0545876bfa44d814c67c",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/Adirondack-perfect_warm_trajectory_latency.png",
+          "sha256": "58eedbe6a5608d5fcb1d7698ba70d49132166203eafa0545876bfa44d814c67c",
+          "bytes": 274221
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/41069021_warm_trajectory_latency.png",
+      "bytes": 181322,
+      "public_sha256": "4e862c3c18b9315e8b9d2dc60bfb22e6dde1cfbad2fd59ee3bafd00533e018ab",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/41069021_warm_trajectory_latency.png",
+          "sha256": "4e862c3c18b9315e8b9d2dc60bfb22e6dde1cfbad2fd59ee3bafd00533e018ab",
+          "bytes": 181322
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "assets/run-2/41069042_warm_trajectory_latency.png",
+      "bytes": 190618,
+      "public_sha256": "79d94dd23baf197b641fb6371b3568e4c5b2627e877a7d10e7496d6697573a51",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/41069042_warm_trajectory_latency.png",
+          "sha256": "79d94dd23baf197b641fb6371b3568e4c5b2627e877a7d10e7496d6697573a51",
+          "bytes": 190618
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-2/summary.json",
+      "bytes": 398032,
+      "public_sha256": "4a0dd45413a11852f1f7cff5383b3ebc0948284894d8e531105e9104cbed36f0",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/summary/final_report.json",
+          "sha256": "a06ff4721cfca5e00ed0b9fd866f59a3fd68834ce3045041453ab7f4439a977d",
+          "bytes": 412401
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 109
+    },
+    {
+      "path": "data/run-2/inputs.json",
+      "bytes": 42439,
+      "public_sha256": "da5a9d129fd4e6bb8d17cfb09e73756df1ff6fb90d193ed171f5ba5a65e2569d",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/inputs/manifest.json",
+          "sha256": "bfce052ff820a39b122fcc7fd15d3b6bbaf49da158adc338822ee3cd07602cfd",
+          "bytes": 43703
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 2
+    },
+    {
+      "path": "data/run-2/latency-curves.csv",
+      "bytes": 2689192,
+      "public_sha256": "84d03ba74f79e7288fa029474ede247fb493bce5c7b711453fbba40dc9540244",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/latency_curves.csv",
+          "sha256": "84d03ba74f79e7288fa029474ede247fb493bce5c7b711453fbba40dc9540244",
+          "bytes": 2689192
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-2/latency-curves-manifest.json",
+      "bytes": 3713,
+      "public_sha256": "debe4aa284b7e265810240aa571b5040026029ca7756a3d9b0a8abadc1e247a1",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/supporting/latency_curves_manifest.json",
+          "sha256": "0b92446b7eb37e38420651c3625783df5caa015f0108f3196b35ab8a28468758",
+          "bytes": 4270
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 12
+    },
+    {
+      "path": "data/run-2/validation-stress.json",
+      "bytes": 57622,
+      "public_sha256": "574de36243f14e18a737417cba996777726e62c04b6f187140628fc92a6fb4ed",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/gpu_regression.json",
+          "sha256": "151d66b51832d73afd7c452f63570562fb99a77b68f60ec69567b3e4eada2807",
+          "bytes": 59435
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-2/validation-dataset.json",
+      "bytes": 258260,
+      "public_sha256": "4c1eadf6ad13e906549b9b1a4af382922ef49c2d494011ca2b0bd61a43df69c9",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/dataset_regression.json",
+          "sha256": "c0f4c52a63cb8544893bd1e14d14e1788774b1eb1353f601de77772bc7ae42fb",
+          "bytes": 271652
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 108
+    },
+    {
+      "path": "data/run-2/validation-ablation.json",
+      "bytes": 57622,
+      "public_sha256": "07de328cdc6c21e9777be2f951337f51364ce63e70e24d23f9d4b7bfbd740694",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/restart_gpu_regression.json",
+          "sha256": "de602694069a8e0fddae92bea6e10917526516470dae793f9470e6a91dc19e14",
+          "bytes": 59435
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/run-2/raw-timings.zip",
+      "bytes": 3763740,
+      "public_sha256": "98d9da41d0ad2efb3608a37af573cc8905e6c31172e790c9445a49482a1aa56a",
+      "sources": [
+        {
+          "path": "results/v1_20_replication_20260912/middlebury_vs_dda/timings.csv",
+          "sha256": "c3f21373e730ec4b972a50f606ba536c856ac725286a8661ac13ac45fad0b945",
+          "bytes": 8497887
+        },
+        {
+          "path": "results/v1_20_replication_20260912/middlebury_vs_hiz/timings.csv",
+          "sha256": "99999a2b6e83465deacd7a174d96dc1529f451669337112304555dae9335ac6e",
+          "bytes": 8867002
+        },
+        {
+          "path": "results/v1_20_replication_20260912/arkit_vs_dda/timings.csv",
+          "sha256": "fba6f9072789ad811d972b70466c3c2a008bf3ad99b6ae4fc3a3e82e6bef65ea",
+          "bytes": 125483
+        },
+        {
+          "path": "results/v1_20_replication_20260912/arkit_vs_hiz/timings.csv",
+          "sha256": "0b947274f1de837a7b5c4b6a362b106c808c0f7ee41e6642754d8a27d0854238",
+          "bytes": 130964
+        },
+        {
+          "path": "results/v1_20_replication_20260912/traversal_ablation/timings.csv",
+          "sha256": "edd1895c21f514229691d24959f7f9900ee2128271914c86df4974a956dafeee",
+          "bytes": 9335942
+        }
+      ],
+      "transformation": "deterministic ZIP of byte-identical CSVs and archive source-hash manifest",
+      "sanitized_strings": 0
+    },
+    {
+      "path": "data/figure-provenance.json",
+      "bytes": 212789,
+      "public_sha256": "9f0118e32650e68fcf17cebb905936a428ab5fe1b050e6f8324d0cb649e65eb1",
+      "sources": [
+        {
+          "path": "results/figure_order_root_20260914/method_linked_real_manifest.json",
+          "sha256": "ecc6407af1115a51645c3f1dface906422096a9baf2c2ee2d8a61357b4bfd000",
+          "bytes": 176036
+        },
+        {
+          "path": "results/figure2_brighter_20260915_042015/final/app_demo_manifest.json",
+          "sha256": "8dc9ced8ca1eab6ad95b40fe099fc18d8547f69505d82f725cd288e0603d4550",
+          "bytes": 17360
+        }
+      ],
+      "transformation": "JSON reserialized; path strings normalized or runtime paths redacted; numerical values unchanged",
+      "sanitized_strings": 39
+    },
+    {
+      "path": "data/ARKitScenes-LICENSE.txt",
+      "bytes": 4796,
+      "public_sha256": "1b6a8700127de50c9d56f8f33eb202a64f6f212fd4b133435f7c8b6bccd3db59",
+      "sources": [
+        {
+          "path": "data/arkitscenes/LICENSE",
+          "sha256": "1b6a8700127de50c9d56f8f33eb202a64f6f212fd4b133435f7c8b6bccd3db59",
+          "bytes": 4796
+        }
+      ],
+      "transformation": "byte-identical copy",
+      "sanitized_strings": 0
+    }
+  ]
+}

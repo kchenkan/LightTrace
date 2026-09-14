@@ -1,0 +1,1246 @@
+{
+  "created_utc": "2026-09-11T14:01:54.909229+00:00",
+  "purpose": "Scientific input audit and supporting-material contact sheet; not solver or performance results",
+  "selection": "Six Middlebury content-selected scenes plus two ARKitScenes frames from distinct visits, fixed before new performance results",
+  "script": "tools/make_eight_input_overview.py",
+  "script_sha256": "2c5cfe3fe93d6ff642ab5dc02fff04f6d45da67a7e294adb0bced742845a43c7",
+  "loader_source_sha256": {
+    "lighttrace/datasets.py": "be0c78f86b0b3a99f2d5e2f3912156a9f0eff6e131045c2db5f8992971840876",
+    "lighttrace/image2d.py": "ba90c79f16e94db5d0aa8eb614db6b995a1b58b125bd4ffa8f2e4e393425a262"
+  },
+  "gpu_work_performed": false,
+  "thumbnail_policy": "Only display resampling; source RGB and actual float32 solver depth are unaltered. Independent full-range depth color scale per input; native ARKit orientation retained.",
+  "array_hash_convention": "SHA-256 of contiguous C-order array payload with explicit dtype; shape and dtype stored beside each hash",
+  "scene_count": 8,
+  "scenes": [
+    {
+      "label": "Pipes-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Pipes-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Pipes-perfect/im0.png",
+          "bytes": 6780434,
+          "sha256": "403b40f6575cc576ab11a94a90453d388182ca195cc9e4067462e432aaa0be2c"
+        },
+        {
+          "path": "data/middlebury/Pipes-perfect/disp0.pfm",
+          "bytes": 22780183,
+          "sha256": "88c6e3725f018f37078edc747a326eb2a5beda860f81d366afc698e7a97c68a8"
+        },
+        {
+          "path": "data/middlebury/Pipes-perfect/calib.txt",
+          "bytes": 211,
+          "sha256": "facbb4986b41bf8d08b11b379d85420c44d870614163bcbccc5e91000823e1f2"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          1924,
+          2960
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 45560320,
+        "sha256_payload": "b1f420965c23c3dda455cc983a299438391c30d96567088b79d90fc3c2fcddbb"
+      },
+      "original_valid_count": 5455738,
+      "original_valid_fraction": 0.9579806287576558,
+      "prepared_receiver_count_before_border": 15200,
+      "prepared_receiver_fraction_before_border": 0.6136950904392765,
+      "effective_receiver_count": 14779,
+      "effective_receiver_fraction": 0.5966973514211886,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 66,
+      "dense_extension_fraction": 0.0026647286821705426,
+      "normalization_median_depth_mm": 5459.83862234394,
+      "normalized_float32_depth_range": [
+        0.49753016233444214,
+        1.5388171672821045
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.5141236674785614,
+        0.9623244404792786,
+        1.4540229058265681
+      ],
+      "calibration": {
+        "fx": 257.4030486486487,
+        "cx": 77.11945945945946,
+        "fy": 266.06565124740126,
+        "cy": 65.68386330561331,
+        "doffs": 5.008540540540541,
+        "baseline": 236.922,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2960,
+          1924
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "e5a1927b90e10037896c5d03a1251463fee08351336f98eb15f44112de6a6dcb"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "c8499c295693d63f07f413267d2ebd393d18aa4d1b49648f88d05864b6bab0c7"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "928bde23a17da5f3caed191d79d71b9dc978be84d72adc6025a3213a5d7902b7"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "af5cc8842c74b1aebf04a7cfea99747233e948bf8468f67314817c0a9bd35047"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "b6c58e78e223affe50385ab284c2907a3de08d54613be335e5221f90b5a9b5ca"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "509a3da30dc6291467f56a777bc838beeb73deca6f55cd7196d5e44b3dfaf3e2"
+        }
+      }
+    },
+    {
+      "label": "Playtable-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Playtable-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Playtable-perfect/im0.png",
+          "bytes": 6374829,
+          "sha256": "e30fb1151b31203aa46c193581f556370f349f5dc72e24625c46d9ebff421e03"
+        },
+        {
+          "path": "data/middlebury/Playtable-perfect/disp0.pfm",
+          "bytes": 20135831,
+          "sha256": "b0ec15bfceb4b801efeb86fd981837e4ba59929e48728820b330f99b9f98f8b4"
+        },
+        {
+          "path": "data/middlebury/Playtable-perfect/calib.txt",
+          "bytes": 213,
+          "sha256": "8fd3f4379ee8eba2d4b4fa0bacfc6e74a6a8c9384a41829d1c76870e9ff95e12"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          1848,
+          2724
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 40271616,
+        "sha256_payload": "c8918a13d6a0cf80e3053cc7b0efdf17ab0330962ffeb301cf57dd8b8e1f2ae8"
+      },
+      "original_valid_count": 4878210,
+      "original_valid_fraction": 0.9690616835440624,
+      "prepared_receiver_count_before_border": 18353,
+      "prepared_receiver_fraction_before_border": 0.7409964470284238,
+      "effective_receiver_count": 17802,
+      "effective_receiver_fraction": 0.71875,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 88,
+      "dense_extension_fraction": 0.0035529715762273903,
+      "normalization_median_depth_mm": 1861.3741648243188,
+      "normalized_float32_depth_range": [
+        0.6632142066955566,
+        1.7870103120803833
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.7364629036188126,
+        1.0250437259674072,
+        1.6743128705024717
+      ],
+      "calibration": {
+        "fx": 164.19792070484584,
+        "cx": 80.45476651982379,
+        "fy": 162.61525,
+        "cy": 64.71304545454545,
+        "doffs": 7.068123348017622,
+        "baseline": 193.006,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2724,
+          1848
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "24077332c51906ca8b7989ea4cadff37350ce62ba870f9bde5f373a6af4fd42b"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "783488905387fc4afdfaaa993c7c2646486046851b41cd6eff8c1020078ba898"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "4cfeb8c6624395692b45ce1ca16306a581f399ba4c04585a269f19eb24ad8198"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "ccece9595dc08a28789069997e2661f1681a6bcbc3ea62953b1032766c4a0ec3"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "efd74f95c4905d5aff430e9755e85d23c87463c831d6e9ce282c5aa42563f423"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "5ca75f4e8bc8a74c622b0421dc7a6e7b74ede00645a26c6d5ff7917399831bfe"
+        }
+      }
+    },
+    {
+      "label": "Motorcycle-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Motorcycle-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Motorcycle-perfect/im0.png",
+          "bytes": 7112296,
+          "sha256": "caed0f8d075dd962c3720b134c6684f3b8e0cbd621c608c626093c6427b08edf"
+        },
+        {
+          "path": "data/middlebury/Motorcycle-perfect/disp0.pfm",
+          "bytes": 23712023,
+          "sha256": "e380ceec77374a25ab0632c5cefe9c5f431aff545f8397157d3915566a77c2fd"
+        },
+        {
+          "path": "data/middlebury/Motorcycle-perfect/calib.txt",
+          "bytes": 215,
+          "sha256": "04ad21246ac7beb81fd7d8d9ad908da855f89c0818dcd90461d6d3a50f96d48b"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          2000,
+          2964
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 47424000,
+        "sha256_payload": "3aca500b54220ea88cc8029c1449f06d5ef85a2245c008269b61089f6ab6813c"
+      },
+      "original_valid_count": 5761176,
+      "original_valid_fraction": 0.9718582995951417,
+      "prepared_receiver_count_before_border": 16099,
+      "prepared_receiver_fraction_before_border": 0.6499919250645995,
+      "effective_receiver_count": 15563,
+      "effective_receiver_fraction": 0.6283510981912145,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 6,
+      "dense_extension_fraction": 0.00024224806201550387,
+      "normalization_median_depth_mm": 2617.6771955960917,
+      "normalized_float32_depth_range": [
+        0.8067777752876282,
+        1.8947248458862305
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.825341249704361,
+        1.079099714756012,
+        1.847675471305847
+      ],
+      "calibration": {
+        "fx": 257.808,
+        "cx": 80.63300404858299,
+        "fy": 256.70425950000003,
+        "cy": 65.7582015,
+        "doffs": 8.054607287449393,
+        "baseline": 193.001,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2964,
+          2000
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "03bad744fb02258872d5fc540d3ee6dcc85a37c7347b84bdd044a87257c2dbf4"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "e94023020dbecbc16bed91d5d929498adb89fbafcf98f9effb4382482f536816"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "00194719b3a0e1ba8ff0347585f37eecd802def2197bed543e19af756e12fe91"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "1a4a46777ebcba818543c30af971f830ea27a172e3deffa8325fbd94df40a1e6"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "68d9160290d55bd8c6e71a09a9b84692a592dac89711c3f24c45fd679e8e0977"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "5eef9e89c23d59fd3346556f1e2a470d14c1c609e21aeb1f124db06044300742"
+        }
+      }
+    },
+    {
+      "label": "Sticks-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Sticks-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Sticks-perfect/im0.png",
+          "bytes": 6687192,
+          "sha256": "ef16f4b1d8b54c35b86bdd3191a3910cfc1d1faa5aad3073b46dbce566c87206"
+        },
+        {
+          "path": "data/middlebury/Sticks-perfect/disp0.pfm",
+          "bytes": 23003671,
+          "sha256": "498b11a6a5d235146e96aff737fd9254fb46d0578906ba4324a65979791725fc"
+        },
+        {
+          "path": "data/middlebury/Sticks-perfect/calib.txt",
+          "bytes": 213,
+          "sha256": "e81c10145ec8259c150ec6a9767ae75e72d4df4187f4d90f3dfa711f2b498a17"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          2008,
+          2864
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 46007296,
+        "sha256_payload": "a49b5463cc642c725425a92214f3f81ad5ececb7fd2e0d1c156149f51410cc62"
+      },
+      "original_valid_count": 5694677,
+      "original_valid_fraction": 0.9902215509470498,
+      "prepared_receiver_count_before_border": 16811,
+      "prepared_receiver_fraction_before_border": 0.6787386950904393,
+      "effective_receiver_count": 16259,
+      "effective_receiver_fraction": 0.6564518733850129,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 20,
+      "dense_extension_fraction": 0.0008074935400516795,
+      "normalization_median_depth_mm": 1552.357736664608,
+      "normalized_float32_depth_range": [
+        0.8602115511894226,
+        1.134103775024414
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.9052917832136154,
+        0.9915467202663422,
+        1.1299196577072144
+      ],
+      "calibration": {
+        "fx": 494.78366480446925,
+        "cx": 73.78075977653631,
+        "fy": 474.14714492031874,
+        "cy": 62.57521464143426,
+        "doffs": 39.26031284916201,
+        "baseline": 148.452,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2864,
+          2008
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "7158a3aa0bf667c4a2c3ab56d8549a7140a451fdc12c4a873f9a7b6221b8ed05"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "90000446411cd392f0cc589e6ff6cc71a769823a93e7ff52c8aa1b3ca59af937"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "2a6635f48c5864b76048d28d6db9f7e51641efc4a995f0e62d28a26f3f655c6c"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "b056f395350ea905e993d05af97286b8cce50a2dd64f53297f681db9120a2506"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "2343cb2496752541f17bc01a1cf23689060f89a8ddba091103a89b1891790290"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "a95ce47cbe8af8e88bac09e8eb3d3dfb5fd5af9685173eac119b2d72a349629c"
+        }
+      }
+    },
+    {
+      "label": "Shelves-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Shelves-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Shelves-perfect/im0.png",
+          "bytes": 6246304,
+          "sha256": "3c8b49478e04f19e5b3ae7e81c69ae4f3773fba3d30b05ac85deb21584712d0f"
+        },
+        {
+          "path": "data/middlebury/Shelves-perfect/disp0.pfm",
+          "bytes": 23616023,
+          "sha256": "7e47d531f5a01041fab17f179d89916f98220d6b839bd6ce2cbc46e173f6a89a"
+        },
+        {
+          "path": "data/middlebury/Shelves-perfect/calib.txt",
+          "bytes": 212,
+          "sha256": "c955f6148e45b23fc518d552ed1c97b43f5cdf9135c6db037f314cef0ad61bad"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          2000,
+          2952
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 47232000,
+        "sha256_payload": "90dcbc18ad79b132d1aafffd18365907be3a8cad9a25727566813f3ec70939c3"
+      },
+      "original_valid_count": 5275456,
+      "original_valid_fraction": 0.893539295392954,
+      "prepared_receiver_count_before_border": 16784,
+      "prepared_receiver_fraction_before_border": 0.6776485788113695,
+      "effective_receiver_count": 16295,
+      "effective_receiver_fraction": 0.6579053617571059,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 669,
+      "dense_extension_fraction": 0.02701065891472868,
+      "normalization_median_depth_mm": 3308.4374685425582,
+      "normalized_float32_depth_range": [
+        0.7670021653175354,
+        1.250474214553833
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.7855637574195862,
+        0.994426816701889,
+        1.2210187876224512
+      ],
+      "calibration": {
+        "fx": 351.2775284552846,
+        "cx": 82.4959349593496,
+        "fy": 348.357534,
+        "cy": 63.722581500000004,
+        "doffs": 11.469918699186993,
+        "baseline": 176.506,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2952,
+          2000
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "f9fc90f80867751b0376290ad8f5c5d13f3a63270acc19f2e1da368ccfda8b11"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "e32392b8490cad3368118125e8e50f6a26ce7bcf712c04edaa7a7aec88fe64ea"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "c100f75bac1daf06975ec88bbe6e1d5d642a41f7a02abf156a3cddd9034801ae"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "c0f1157c56f285dc4c0df9a3c994b3687a7992ca4116a6ad0263c906b389dc58"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "14943ab2012caefcf799d50d79f4c838ad205a5c272cf147f559aca4cbf50667"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "061c3ca68129b897fa8596ab20a51f82e7b018d6073ca8e457a88c904120d346"
+        }
+      }
+    },
+    {
+      "label": "Adirondack-perfect",
+      "dataset": "Middlebury",
+      "directory": "data/middlebury/Adirondack-perfect",
+      "resolution_wh": [
+        192,
+        129
+      ],
+      "source_files": [
+        {
+          "path": "data/middlebury/Adirondack-perfect/im0.png",
+          "bytes": 6079855,
+          "sha256": "b322bad57398336a2730ad4363b267dff2324adcdf0b8aef2a01f931aeaf5ab9"
+        },
+        {
+          "path": "data/middlebury/Adirondack-perfect/disp0.pfm",
+          "bytes": 22901783,
+          "sha256": "7f60d0734b9a00c8ac56db21a36a2193b67e4ddb02d84360c476c094574a03ff"
+        },
+        {
+          "path": "data/middlebury/Adirondack-perfect/calib.txt",
+          "bytes": 213,
+          "sha256": "eface1c113178399b8fc62470244cf4baea03a41304fc55ade487505e31604fe"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          1988,
+          2880
+        ],
+        "dtype": "<f8",
+        "order": "C",
+        "bytes": 45803520,
+        "sha256_payload": "0b3d253f12fae1c6a3741fac30bfb1cca12d4d410bfee6cd2dae8ba35eda3f60"
+      },
+      "original_valid_count": 5691206,
+      "original_valid_fraction": 0.9940207215515314,
+      "prepared_receiver_count_before_border": 20574,
+      "prepared_receiver_fraction_before_border": 0.8306686046511628,
+      "effective_receiver_count": 19977,
+      "effective_receiver_fraction": 0.8065649224806202,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 0,
+      "dense_extension_fraction": 0.0,
+      "normalization_median_depth_mm": 2332.5986749750473,
+      "normalized_float32_depth_range": [
+        0.696278989315033,
+        1.313523292541504
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.7379842466115951,
+        0.9917563796043396,
+        1.2977449429035186
+      ],
+      "calibration": {
+        "fx": 277.4147333333333,
+        "cx": 96.3718,
+        "fy": 270.01886770623736,
+        "cy": 63.895620724346074,
+        "doffs": 13.937266666666666,
+        "baseline": 176.252,
+        "width": 192.0,
+        "height": 129.0
+      },
+      "preparation": {
+        "dataset": "Middlebury 2014 perfect calibration",
+        "source_quantity": "left ground-truth disparity in pixels",
+        "source_resolution": [
+          2880,
+          1988
+        ],
+        "resize": "valid-support-weighted bilinear disparity resize; horizontal disparity and calibration scaled together",
+        "depth_conversion": "baseline_mm * fx_pixels / (disparity_pixels + doffs_pixels)",
+        "receiver_support_threshold": 0.999,
+        "extension_known_threshold": 1e-06,
+        "invalid_policy": "four-connected neighbor-mean extension in disparity; unsupported receivers excluded; rays can cross extension",
+        "rgb_resize": "Lanczos"
+      },
+      "native_sample_preservation_check": {
+        "native_preservation_claim": false,
+        "reason": "Middlebury is resized to the frozen 192 x 129 test grid."
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            129,
+            192,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 74304,
+          "sha256_payload": "6987074915b7416a982f3f2f1e80b77bd3ba50b1db8ee242b121c1b6bd06cb8d"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 198144,
+          "sha256_payload": "785e2ab42deb29a4ab339dc105b8998fb67643f7500075b4b37510aa537f7899"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "1019159f91ad4d74dc7b070f6509aecd9b0fa41f222f6a4517193e01eb9c393c"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "6bf68a7ad3b20a36b2d9c7566b1ef226ec77edbafb490b835ca9b81f13ce8d1a"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 99072,
+          "sha256_payload": "ac128ed7f174e81f27c6c25bd3418363a29cb4f9dd589bf3dad9ff24be625d4d"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            129,
+            192
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 24768,
+          "sha256_payload": "97a1100f04d178d2e93439de7865705b6c14c74c3831518e6b8a19f9bddd9197"
+        }
+      }
+    },
+    {
+      "label": "ARKit-41069021",
+      "dataset": "ARKitScenes",
+      "directory": "data/arkitscenes/Validation/41069021",
+      "resolution_wh": [
+        1920,
+        1440
+      ],
+      "source_files": [
+        {
+          "path": "data/arkitscenes/Validation/41069021/scene.json",
+          "bytes": 657,
+          "sha256": "47dbe7fbefa378954c6ebef9c6959f9b980daf16afcce98392ec961b99848cdf"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069021/wide/41069021_380.313.png",
+          "bytes": 1703535,
+          "sha256": "5eec93251e116aaca72c4ac9e2ee796f470122cdc2c27d8bd674e2435e263a97"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069021/highres_depth/41069021_380.313.png",
+          "bytes": 308012,
+          "sha256": "22312f44e3be95a1d7ca6c6738ed8531d2968685eb282d1eaf346d0db5508f64"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069021/wide_intrinsics/41069021_380.313.pincam",
+          "bytes": 41,
+          "sha256": "22237942be8c2f422d906d591b6077f7ff86526bb8680a5983adcb3eae14d394"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069021/provenance.json",
+          "bytes": 3120,
+          "sha256": "a799d0920bffaa775089960ef659b06b7636971818ef3643bf9f17054fe0bf4a"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          1440,
+          1920
+        ],
+        "dtype": "<u2",
+        "order": "C",
+        "bytes": 5529600,
+        "sha256_payload": "3f251386b4a08d90ae69db17099e60f73be1ce9a39f234f0c0b2c1458ecabac6"
+      },
+      "original_valid_count": 2681749,
+      "original_valid_fraction": 0.9699612991898148,
+      "prepared_receiver_count_before_border": 2681749,
+      "prepared_receiver_fraction_before_border": 0.9699612991898148,
+      "effective_receiver_count": 2675166,
+      "effective_receiver_fraction": 0.9675802951388889,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 83051,
+      "dense_extension_fraction": 0.030038700810185184,
+      "normalization_median_depth_mm": 561.0,
+      "normalized_float32_depth_range": [
+        0.7682709693908691,
+        1.5579322576522827
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.793219804763794,
+        1.0,
+        1.3155080080032349
+      ],
+      "calibration": {
+        "width": 1920.0,
+        "height": 1440.0,
+        "fx": 1600.15,
+        "fy": 1600.15,
+        "cx": 936.648,
+        "cy": 707.961
+      },
+      "preparation": {
+        "dataset": "ARKitScenes",
+        "video_id": "41069021",
+        "visit_id": "381658",
+        "frame_id": "41069021_380.313",
+        "reference_kind": "official FARO mesh projected highres_depth",
+        "native_resolution": [
+          1920,
+          1440
+        ],
+        "resolution": [
+          1920,
+          1440
+        ],
+        "raw_valid_fraction": 0.9699612991898148,
+        "extension_fraction": 0.030038700810185184,
+        "receiver_support_fraction_before_border": 0.9699612991898148,
+        "depth_unit": "millimeter",
+        "native_orientation_preserved": true,
+        "valid_native_depth_filtered": false,
+        "invalid_policy": "four-connected neighbor mean extension in metric depth; invalid receivers excluded; rays can cross extension",
+        "normalization_median_depth_mm": 561.0
+      },
+      "native_sample_preservation_check": {
+        "native_dimensions": [
+          1920,
+          1440
+        ],
+        "rgb_identical_to_native": true,
+        "valid_normalized_depth_exactly_preserved": true,
+        "prepared_receiver_mask_equals_original_validity": true,
+        "max_float64_reconstructed_valid_depth_error_mm": 1.1368683772161603e-13,
+        "max_float32_quantized_valid_depth_error_mm": 3.337860107421875e-05,
+        "rotation_applied": false,
+        "source_sky_direction": "Up",
+        "video_id": "41069021",
+        "visit_id": "381658",
+        "frame_id": "41069021_380.313",
+        "reference_kind": "official FARO mesh projected highres_depth"
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            1440,
+            1920,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 8294400,
+          "sha256_payload": "ebad4d6993cc0b0d01fb458f57b0265128b685ea258a342560384ecfc6650bcf"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 22118400,
+          "sha256_payload": "a4f65c609c516b74bdde0ae3deba1e5a24607c99a0eaa716dc497815f69b94d9"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 11059200,
+          "sha256_payload": "b072efe8873d14cf6aa96f00444563497de8e5a26f6f34ef861a65529d9fe0ed"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 2764800,
+          "sha256_payload": "b1cf833561ab45641c9a42f98df28b8527e0b57db9eb3f2ec743a29da601c4a8"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 11059200,
+          "sha256_payload": "3ab648eb4d4875ca0079fe1f93b1956066ac4e0e45b98dd44dba2e56ae583ee1"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 2764800,
+          "sha256_payload": "5c45c9720ca3eaafb1bbf08c017549e7ff5e1cc13424f6b64ec2aa0d2707a0e1"
+        }
+      }
+    },
+    {
+      "label": "ARKit-41069042",
+      "dataset": "ARKitScenes",
+      "directory": "data/arkitscenes/Validation/41069042",
+      "resolution_wh": [
+        1920,
+        1440
+      ],
+      "source_files": [
+        {
+          "path": "data/arkitscenes/Validation/41069042/scene.json",
+          "bytes": 663,
+          "sha256": "8dc8849de2b5e114ca0053f4f70a9fe742b8355e060da4778c61cadf9f626013"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069042/wide/41069042_3090.503.png",
+          "bytes": 1877800,
+          "sha256": "6be05c9e32d6b1897ce524090663cb7f125d8d40214123b6690af7923a195dd3"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069042/highres_depth/41069042_3090.503.png",
+          "bytes": 911574,
+          "sha256": "3d736212da53db00c2c88359419125c11e13d8232aaaffd2813ef2b55a39d295"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069042/wide_intrinsics/41069042_3090.503.pincam",
+          "bytes": 41,
+          "sha256": "ebf4af29720829eecd494b4f2f69e5aa10d4cce14356fb39a316d2c1893159af"
+        },
+        {
+          "path": "data/arkitscenes/Validation/41069042/provenance.json",
+          "bytes": 3266,
+          "sha256": "0bb368bfdb234e055e509725ab259712499b48da8fdf6385a0f96016b8396675"
+        }
+      ],
+      "source_depth_or_disparity_array": {
+        "shape": [
+          1440,
+          1920
+        ],
+        "dtype": "<u2",
+        "order": "C",
+        "bytes": 5529600,
+        "sha256_payload": "5a65d42f577c56642975bd2dbc9cafde3ea96b00c04c4e665b459364467efa1f"
+      },
+      "original_valid_count": 2530585,
+      "original_valid_fraction": 0.9152868200231481,
+      "prepared_receiver_count_before_border": 2530585,
+      "prepared_receiver_fraction_before_border": 0.9152868200231481,
+      "effective_receiver_count": 2524583,
+      "effective_receiver_fraction": 0.9131159577546296,
+      "border_exclusion": "one-pixel image border, exactly as both evaluation harnesses",
+      "dense_extension_count": 234215,
+      "dense_extension_fraction": 0.08471317997685185,
+      "normalization_median_depth_mm": 792.0,
+      "normalized_float32_depth_range": [
+        0.6578282713890076,
+        1.7512626647949219
+      ],
+      "normalized_float32_depth_percentiles_1_50_99": [
+        0.6755050420761108,
+        1.0467171669006348,
+        1.630050539970398
+      ],
+      "calibration": {
+        "width": 1920.0,
+        "height": 1440.0,
+        "fx": 1592.92,
+        "fy": 1592.92,
+        "cx": 933.178,
+        "cy": 710.268
+      },
+      "preparation": {
+        "dataset": "ARKitScenes",
+        "video_id": "41069042",
+        "visit_id": "381649",
+        "frame_id": "41069042_3090.503",
+        "reference_kind": "official FARO mesh projected highres_depth",
+        "native_resolution": [
+          1920,
+          1440
+        ],
+        "resolution": [
+          1920,
+          1440
+        ],
+        "raw_valid_fraction": 0.9152868200231481,
+        "extension_fraction": 0.08471317997685185,
+        "receiver_support_fraction_before_border": 0.9152868200231481,
+        "depth_unit": "millimeter",
+        "native_orientation_preserved": true,
+        "valid_native_depth_filtered": false,
+        "invalid_policy": "four-connected neighbor mean extension in metric depth; invalid receivers excluded; rays can cross extension",
+        "normalization_median_depth_mm": 792.0
+      },
+      "native_sample_preservation_check": {
+        "native_dimensions": [
+          1920,
+          1440
+        ],
+        "rgb_identical_to_native": true,
+        "valid_normalized_depth_exactly_preserved": true,
+        "prepared_receiver_mask_equals_original_validity": true,
+        "max_float64_reconstructed_valid_depth_error_mm": 1.1368683772161603e-13,
+        "max_float32_quantized_valid_depth_error_mm": 4.673004150390625e-05,
+        "rotation_applied": false,
+        "source_sky_direction": "Left",
+        "video_id": "41069042",
+        "visit_id": "381649",
+        "frame_id": "41069042_3090.503",
+        "reference_kind": "official FARO mesh projected highres_depth"
+      },
+      "prepared_array_hashes": {
+        "rgb_uint8": {
+          "shape": [
+            1440,
+            1920,
+            3
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 8294400,
+          "sha256_payload": "608f213df2854569ee3d5586864e4668e27acf30038ad23d239d4cdf6c74cde0"
+        },
+        "depth_float64_before_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<f8",
+          "order": "C",
+          "bytes": 22118400,
+          "sha256_payload": "1e96f324771fd41662e330d050156b9def72eedbef2d593c42cf972651bcc3a5"
+        },
+        "depth_float32_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<f4",
+          "order": "C",
+          "bytes": 11059200,
+          "sha256_payload": "c68523f5e2346c1befad78df66a1c4660bec6a17e9b28c2c7c130991fead2be7"
+        },
+        "receiver_support_uint8_before_border": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 2764800,
+          "sha256_payload": "6b1e86e1c03428f408b56872ebcbd31e4f2b5e44d498bd097be6a57b0d75b4a7"
+        },
+        "effective_receiver_uint32_upload": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "<u4",
+          "order": "C",
+          "bytes": 11059200,
+          "sha256_payload": "6d0d8d2e8e3d9d46cbfbd934ba39e097907df1b1fb60895379843e5ddaaeaee9"
+        },
+        "extension_mask_uint8": {
+          "shape": [
+            1440,
+            1920
+          ],
+          "dtype": "|u1",
+          "order": "C",
+          "bytes": 2764800,
+          "sha256_payload": "c50c76e86ac063c477ccef75d2830f0b34b8c060b4b05de954189e2c0b9e8204"
+        }
+      }
+    }
+  ],
+  "overview_sha256": "419af07196f29da99940b7d100016151024416650a8f6942469cc2f1d8b7fb3e"
+}
