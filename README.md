@@ -1,4 +1,4 @@
-# LightTrace: Efficient Ray-Surface First-Hit Queries on Fixed Depth Images
+# LightTrace: Efficient Screen-Space Ray-Surface First-Hit Queries on Fixed Depth Images
 
 ## Supplementary material
 
